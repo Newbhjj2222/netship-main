@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { db } from "@/components/firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { FaBold, FaItalic, FaUnderline, FaHeading, FaListUl, FaLink, FaImage, FaSave, FaTrash, FaArrowLeft } from "react-icons/fa";
-import styles from "@/styles/editor.module.css";
+import styles from "@/styles/Editor.module.css";
 import LinkComponent from "../../components/Link";
 import { useI18n } from "@/i18n/I18nProvider";
 
