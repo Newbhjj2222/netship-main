@@ -1,0 +1,454 @@
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  min-height: 100vh;
+  background: #0a0e17;
+  padding: 2rem 1.5rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+  display: flex;
+  margin-top: 65px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   CARD
+============================================ */
+.card {
+  max-width: 560px;
+  width: 100%;
+  background: #121926;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.headerIcon {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* ============================================
+   STATUS ICON
+============================================ */
+.statusIconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.spinner {
+  font-size: 3.5rem;
+  color: #60a5fa;
+  animation: spin 1s linear infinite;
+}
+
+.successIcon {
+  font-size: 3.5rem;
+  color: #34d399;
+}
+
+.errorIcon {
+  font-size: 3.5rem;
+  color: #f87171;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   STATUS WRAPPER
+============================================ */
+.statusWrapper {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.statusLoading {
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.statusSuccess {
+  background: rgba(52, 211, 153, 0.05);
+  border: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+.statusError {
+  background: rgba(248, 113, 113, 0.05);
+  border: 1px solid rgba(248, 113, 113, 0.1);
+}
+
+.statusTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.statusMessage {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================
+   DATA WRAPPER
+============================================ */
+.dataWrapper {
+  background: #1a2332;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.dataTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dataRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dataRow:last-child {
+  border-bottom: none;
+}
+
+.dataLabel {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.dataValue {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.dataValueSuccess {
+  font-size: 0.85rem;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.dataValueError {
+  font-size: 0.85rem;
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* ============================================
+   ACTIONS
+============================================ */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.homeBtn,
+.balanceBtn,
+.retryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.homeBtn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.homeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.balanceBtn {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+}
+
+.balanceBtn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
+}
+
+.retryBtn {
+  background: rgba(250, 204, 21, 0.12);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.15);
+}
+
+.retryBtn:hover {
+  background: rgba(250, 204, 21, 0.25);
+  transform: scale(1.02);
+}
+
+/* ============================================
+   DEBUG
+============================================ */
+.debug {
+  margin-top: 0.5rem;
+}
+
+.debugSummary {
+  font-size: 0.8rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+
+.debugSummary:hover {
+  color: #94a3b8;
+}
+
+.debugPre {
+  background: #0d1520;
+  color: #94a3b8;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  overflow-x: auto;
+  margin: 0.5rem 0 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .headerIcon {
+    font-size: 1.2rem;
+  }
+
+  .spinner,
+  .successIcon,
+  .errorIcon {
+    font-size: 3rem;
+  }
+
+  .statusTitle {
+    font-size: 1.1rem;
+  }
+
+  .statusMessage {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .backBtn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .headerIcon {
+    font-size: 1rem;
+  }
+
+  .spinner,
+  .successIcon,
+  .errorIcon {
+    font-size: 2.5rem;
+  }
+
+  .statusTitle {
+    font-size: 1rem;
+  }
+
+  .statusMessage {
+    font-size: 0.85rem;
+  }
+
+  .dataWrapper {
+    padding: 0.75rem 1rem;
+  }
+
+  .dataRow {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.4rem 0;
+  }
+
+  .dataLabel {
+    font-size: 0.75rem;
+  }
+
+  .dataValue,
+  .dataValueSuccess,
+  .dataValueError {
+    font-size: 0.8rem;
+  }
+
+  .homeBtn,
+  .balanceBtn,
+  .retryBtn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .debugPre {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+}
+
+/* ===== VERY SMALL ===== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0.75rem 0.5rem 1rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .spinner,
+  .successIcon,
+  .errorIcon {
+    font-size: 2rem;
+  }
+
+  .statusTitle {
+    font-size: 0.9rem;
+  }
+
+  .statusMessage {
+    font-size: 0.8rem;
+  }
+
+  .homeBtn,
+  .balanceBtn,
+  .retryBtn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}
+
+button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 0.01ms;
+  }
+}

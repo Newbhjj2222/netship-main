@@ -1,0 +1,1274 @@
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.container {
+  min-height: 100vh;
+  background: #070b1a;
+  color: #ffffff;
+
+  padding: 20px;
+  max-width: 1100px;
+  margin: 70px auto;
+}
+
+/* ========================================
+   PAGE TITLE
+======================================== */
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   USER INFO
+======================================== */
+
+.userInfo {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.userInfo strong {
+  color: #ffffff;
+}
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.error {
+  margin-bottom: 20px;
+  padding: 12px;
+
+  text-align: center;
+
+  background: rgba(220, 38, 38, 0.15);
+  color: #f87171;
+
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: 12px;
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  padding: 25px;
+
+  background: #0f172a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* ========================================
+   STORY TYPE SECTION
+======================================== */
+
+.storyTypeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.storyTypeLabel {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.storyTypeHelp {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: -5px;
+}
+
+.storyTypeOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.storyTypeOption {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100px;
+  padding: 15px;
+
+  background: #1e293b;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  cursor: pointer;
+  text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.storyTypeOption:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  background: #25334a;
+  transform: translateY(-2px);
+}
+
+.storyTypeOptionActive {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.15);
+
+  box-shadow:
+    0 0 0 2px rgba(99, 102, 241, 0.15),
+    0 8px 25px rgba(99, 102, 241, 0.12);
+}
+
+.storyTypeOption input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.storyTypeIcon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.storyTypeName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.storyTypeDescription {
+  margin-top: 5px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* ========================================
+   PARTS SETTINGS
+======================================== */
+
+.partsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 18px;
+
+  background: rgba(30, 41, 59, 0.7);
+
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 14px;
+}
+
+.partsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.partsTitle {
+  margin: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.partsDescription {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.partsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.partsField {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.partsField label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ========================================
+   STANDALONE STORY SETTINGS
+======================================== */
+
+.standaloneNotice {
+  padding: 15px 16px;
+
+  background: rgba(16, 185, 129, 0.08);
+  color: #a7f3d0;
+
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 12px;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.standaloneNotice strong {
+  color: #34d399;
+}
+
+/* ========================================
+   SERIES SETTINGS
+======================================== */
+
+.seriesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  padding: 18px;
+
+  background: rgba(30, 41, 59, 0.7);
+
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 14px;
+}
+
+.seriesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.seriesTitle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.seriesDescription {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.seriesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* ========================================
+   SEASON / EPISODE SETTINGS
+======================================== */
+
+.seasonSettings {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  padding: 18px;
+
+  background: rgba(15, 23, 42, 0.8);
+
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  border-radius: 14px;
+}
+
+.seasonSettingsTitle {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.seasonSettingsDescription {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: -5px 0 0;
+}
+
+.seasonEpisodeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.input,
+.select,
+.fileInput,
+.textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  background: #1e293b;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  outline: none;
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #94a3b8;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
+.textarea {
+  min-height: 120px;
+  max-height: 200px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 12px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 12px;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ========================================
+   FILE INPUT
+======================================== */
+
+.fileInput {
+  cursor: pointer;
+}
+
+.fileInput::-webkit-file-upload-button {
+  background: #4f46e5;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px 14px;
+  margin-right: 10px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fileInput::-webkit-file-upload-button:hover {
+  background: #6366f1;
+  transform: scale(1.02);
+}
+
+/* ========================================
+   SELECT
+======================================== */
+
+.select {
+  min-height: 55px;
+  appearance: auto;
+}
+
+.select option {
+  background: #1e293b;
+  color: #ffffff;
+  padding: 10px;
+}
+
+/* ========================================
+   SEASON SELECTOR SPECIAL STYLING
+======================================== */
+
+.seasonSelect {
+  min-height: 55px;
+  appearance: auto;
+  background: #1e293b;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.seasonSelect:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.seasonSelect option {
+  background: #1e293b;
+  color: #ffffff;
+  padding: 10px;
+}
+
+/* ========================================
+   IMAGE PREVIEW
+======================================== */
+
+.previewImage {
+  width: 100%;
+  max-height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.previewImage:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #6366f1
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #4338ca,
+    #4f46e5
+  );
+
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.button:active {
+  transform: translateY(0px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+.secondaryButton {
+  width: 100%;
+  padding: 13px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+
+  background: #1e293b;
+  color: #cbd5e1;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #263449;
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #ffffff;
+}
+
+/* ========================================
+   EPISODE BOX
+======================================== */
+
+.episodeBox {
+  padding: 20px;
+
+  background: #1e293b;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.episodeBox:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   EPISODE TITLE
+======================================== */
+
+.episodeTitle {
+  margin-bottom: 15px;
+
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+}
+
+/* ========================================
+   STORY EDITOR
+======================================== */
+
+.editor {
+  min-height: 180px;
+  max-height: 300px;
+  padding: 18px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  transition: all 0.3s ease;
+}
+
+.editor:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.editor img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.editor h1,
+.editor h2,
+.editor h3,
+.editor h4 {
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+.editor p {
+  margin-bottom: 12px;
+}
+
+.editor ul,
+.editor ol {
+  padding-left: 25px;
+}
+
+.editor blockquote {
+  border-left: 4px solid #6366f1;
+  padding-left: 15px;
+  margin: 15px 0;
+  color: #94a3b8;
+}
+
+.editor a {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+/* ========================================
+   EDITOR TOOLBAR
+======================================== */
+
+.editorToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 10px;
+
+  background: #1e293b;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+
+  border-radius: 12px 12px 0 0;
+}
+
+.editorToolButton {
+  min-width: 38px;
+  min-height: 36px;
+
+  padding: 7px 10px;
+
+  background: #0f172a;
+  color: #cbd5e1;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.editorToolButton:hover {
+  background: #4f46e5;
+  color: #ffffff;
+  border-color: #6366f1;
+}
+
+.editorToolButton:active {
+  transform: scale(0.96);
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.editor::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 12px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 20px;
+}
+
+.editor::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ========================================
+   LOADING SPINNER (optional)
+======================================== */
+
+.loadingSpinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   FOLDER SELECTOR LABEL
+======================================== */
+
+.folderLabel {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+/* ========================================
+   CATEGORIES HELP TEXT
+======================================== */
+
+.helpText {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: -10px;
+  font-style: italic;
+}
+
+/* ========================================
+   FORM SECTION LABEL
+======================================== */
+
+.formLabel {
+  display: block;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 40px auto;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .form {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .previewImage {
+    max-height: 250px;
+  }
+
+  .editor {
+    min-height: 200px;
+    max-height: 250px;
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .textarea {
+    min-height: 100px;
+    max-height: 160px;
+  }
+
+  .episodeBox {
+    padding: 16px;
+  }
+
+  .input,
+  .select,
+  .fileInput,
+  .seasonSelect,
+  .textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .storyTypeOptions {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+  }
+
+  .storyTypeOption {
+    min-height: 90px;
+    padding: 12px;
+  }
+
+  .storyTypeIcon {
+    font-size: 24px;
+  }
+
+  .storyTypeName {
+    font-size: 14px;
+  }
+
+  .storyTypeDescription {
+    font-size: 11px;
+  }
+
+  .partsGrid,
+  .seriesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seasonEpisodeGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .userInfo {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .form {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .input,
+  .select,
+  .fileInput,
+  .seasonSelect,
+  .textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .textarea {
+    min-height: 80px;
+    max-height: 140px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .episodeBox {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .episodeTitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+
+  .editor {
+    min-height: 150px;
+    max-height: 200px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-radius: 10px;
+  }
+
+  .previewImage {
+    max-height: 180px;
+    border-radius: 12px;
+  }
+
+  .error {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .fileInput::-webkit-file-upload-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .helpText {
+    font-size: 12px;
+  }
+
+  .seasonSelect {
+    min-height: 45px;
+  }
+
+  .storyTypeOptions {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .storyTypeOption {
+    min-height: 80px;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .storyTypeIcon {
+    margin-bottom: 0;
+    font-size: 25px;
+  }
+
+  .storyTypeDescription {
+    margin-top: 3px;
+  }
+
+  .partsGrid,
+  .seriesGrid,
+  .seasonEpisodeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .partsSection,
+  .seriesSection,
+  .seasonSettings {
+    padding: 14px;
+  }
+
+  .editorToolbar {
+    gap: 5px;
+    padding: 7px;
+  }
+
+  .editorToolButton {
+    min-width: 34px;
+    min-height: 34px;
+    padding: 6px 8px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .container {
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .form {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .input,
+  .select,
+  .fileInput,
+  .seasonSelect,
+  .textarea {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .editor {
+    min-height: 120px;
+    max-height: 160px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .episodeBox {
+    padding: 10px;
+  }
+
+  .episodeTitle {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .previewImage {
+    max-height: 150px;
+  }
+
+  .storyTypeOption {
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  .storyTypeIcon {
+    font-size: 22px;
+  }
+
+  .storyTypeName {
+    font-size: 13px;
+  }
+
+  .storyTypeDescription {
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   DARK MODE SCROLLBAR (for the whole page)
+======================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ========================================
+   SELECT MULTIPLE STYLING
+======================================== */
+
+.select[multiple] {
+  min-height: 120px;
+  padding: 10px;
+}
+
+.select[multiple] option {
+  padding: 8px 12px;
+  margin: 2px 0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.select[multiple] option:hover {
+  background: #4f46e5;
+}
+
+.select[multiple] option:checked {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+/* ========================================
+   FILE INPUT CUSTOM STYLING
+======================================== */
+
+.fileInputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.fileInputCustom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  background: #1e293b;
+  border: 2px dashed rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fileInputCustom:hover {
+  border-color: #6366f1;
+  background: #1e293b;
+  transform: scale(1.01);
+}
+
+.fileInputCustom svg {
+  width: 40px;
+  height: 40px;
+  color: #6366f1;
+}
+
+.fileInputHidden {
+  display: none;
+}
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.episodeBox {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.episodeBox:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.episodeBox:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.episodeBox:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.episodeBox:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.episodeBox:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.episodeBox:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.episodeBox:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.episodeBox:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.episodeBox:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+/* ========================================
+   ACCESSIBILITY / FOCUS
+======================================== */
+
+.storyTypeOption:focus-within {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.button:focus-visible,
+.secondaryButton:focus-visible,
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible,
+.seasonSelect:focus-visible,
+.editorToolButton:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   DISABLED INPUTS
+======================================== */
+
+.input:disabled,
+.select:disabled,
+.seasonSelect:disabled,
+.textarea:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #172033;
+}
+
+/* ========================================
+   PRINT
+======================================== */
+
+@media print {
+  .container {
+    background: #ffffff;
+    color: #000000;
+    margin: 0;
+    max-width: none;
+  }
+
+  .form {
+    background: #ffffff;
+    border: none;
+  }
+
+  .button,
+  .secondaryButton {
+    display: none;
+  }
+}

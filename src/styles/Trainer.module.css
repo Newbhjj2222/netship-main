@@ -1,0 +1,249 @@
+/* styles/Trainer.module.css */
+
+/* ===== VARIABLES & RESET ===== */
+.container {
+  max-width: 1440px;
+  margin: 70px auto;
+  padding: 2rem 1.5rem;
+  background: #0d1117;
+  min-height: 100vh;
+  color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #f0f6fc;
+  border-bottom: 2px solid #30363d;
+  padding-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+/* ===== TABLE WRAPPER (scroll horizontal) ===== */
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== TABLE ===== */
+.table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #161b22;
+}
+
+/* ===== HEADER ===== */
+.table thead {
+  background: #21262d;
+  border-bottom: 2px solid #30363d;
+}
+
+.table thead th {
+  padding: 0.9rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8b949e;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  background: #21262d;
+  z-index: 2;
+}
+
+/* ===== BODY ROWS ===== */
+.table tbody tr {
+  border-bottom: 1px solid #21262d;
+  transition: background 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background: #1c2128;
+}
+
+.table tbody td {
+  padding: 0.8rem 0.75rem;
+  vertical-align: middle;
+  color: #e6edf3;
+  word-break: break-word;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty {
+  text-align: center !important;
+  padding: 3rem 1rem !important;
+  color: #8b949e;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ===== DELETE BUTTON ===== */
+.deleteBtn {
+  background: #da3633;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: 72px;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: #f85149;
+  transform: scale(1.02);
+  box-shadow: 0 0 16px rgba(248, 81, 73, 0.3);
+}
+
+.deleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============================================ */
+/* ===== RESPONSIVE (Mobile First) ===== */
+/* ============================================ */
+
+/* --- Tablets & small laptops --- */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+    min-width: 1000px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.6rem 0.5rem;
+  }
+
+  .deleteBtn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+    min-width: 60px;
+  }
+}
+
+/* --- Mobile phones --- */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .tableWrapper {
+    border-radius: 8px;
+    border-width: 1px;
+  }
+
+  .table {
+    font-size: 0.7rem;
+    min-width: 760px;
+  }
+
+  .table thead th {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.3px;
+  }
+
+  .table tbody td {
+    padding: 0.5rem 0.4rem;
+  }
+
+  /* Stack delete button on its own row on very small screens? 
+     We keep table layout but buttons become smaller */
+  .deleteBtn {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.65rem;
+    min-width: 52px;
+    border-radius: 4px;
+  }
+
+  .empty {
+    font-size: 0.9rem;
+    padding: 2rem 0.5rem !important;
+  }
+}
+
+/* --- Very small phones (≤ 400px) --- */
+@media (max-width: 400px) {
+  .container {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .table {
+    font-size: 0.6rem;
+    min-width: 640px;
+  }
+
+  .table thead th {
+    padding: 0.4rem 0.3rem;
+    font-size: 0.55rem;
+  }
+
+  .table tbody td {
+    padding: 0.4rem 0.3rem;
+  }
+
+  .deleteBtn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.55rem;
+    min-width: 44px;
+  }
+}
+
+/* ===== SCROLLBAR STYLING (optional) ===== */
+.tableWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: #161b22;
+  border-radius: 0 0 8px 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* ===== FIREFOX SCROLLBAR ===== */
+.tableWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #161b22;
+}

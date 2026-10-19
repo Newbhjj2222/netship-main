@@ -1,0 +1,1941 @@
+/* =========================================================
+   styles/invoice.module.css
+   Invoice Generator — Dark, responsive, colorful
+========================================================= */
+
+/* =========================================================
+   ROOT / PAGE
+========================================================= */
+.page {
+  --bg: #070711;
+  --bg-2: #0a0a18;
+  --surface: rgba(19, 19, 34, 0.72);
+  --surface-2: rgba(26, 26, 46, 0.7);
+  --surface-3: rgba(14, 14, 28, 0.92);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #ecedf7;
+  --text-2: #d6d7ef;
+  --muted: #9698b8;
+  --muted-2: #6f7192;
+
+  --purple: #7c5cff;
+  --purple-2: #4b32c3;
+  --cyan: #00e0ff;
+  --cyan-2: #0a7fa8;
+  --pink: #ff4d9d;
+  --pink-2: #a3125f;
+  --green: #24d18a;
+  --green-2: #0b7d52;
+  --amber: #f5a524;
+  --red: #ef4444;
+  --red-2: #a3125f;
+
+  min-height: 100vh;
+  padding: 28px 16px 100px;
+  color: var(--text);
+  background:
+    radial-gradient(900px 520px at 8% -12%, rgba(124, 92, 255, 0.28), transparent 60%),
+    radial-gradient(820px 520px at 102% -5%, rgba(0, 224, 255, 0.18), transparent 58%),
+    radial-gradient(760px 620px at 50% 118%, rgba(255, 77, 157, 0.16), transparent 62%),
+    var(--bg);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.shell {
+  max-width: 1240px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 22px 24px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgba(124, 92, 255, 0.2), rgba(0, 224, 255, 0.08));
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  animation: rise 0.5s ease both;
+}
+
+.heroLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.heroIcon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 12px 30px rgba(124, 92, 255, 0.5);
+}
+
+.heroText {
+  min-width: 0;
+}
+
+.heroText h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.heroText h1 span {
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroText p {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 10px 28px rgba(124, 92, 255, 0.5);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   EDITING BANNER
+========================================================= */
+.editingBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 224, 255, 0.5);
+  background:
+    linear-gradient(120deg, rgba(0, 224, 255, 0.14), rgba(124, 92, 255, 0.08));
+  box-shadow: 0 14px 34px rgba(0, 224, 255, 0.18);
+  animation: rise 0.35s ease both;
+}
+
+.editingText {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.88rem;
+  color: #cfe9ff;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.editingText svg {
+  color: var(--cyan);
+  font-size: 1.05rem;
+}
+
+.editingText strong {
+  color: var(--text);
+  font-family: "Consolas", "Monaco", monospace;
+  font-weight: 800;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 18px;
+  align-items: start;
+}
+
+.formCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+.card {
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  animation: rise 0.5s ease both;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.cardIcon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.iconPurple {
+  background: linear-gradient(135deg, var(--purple), var(--purple-2));
+  box-shadow: 0 8px 22px rgba(124, 92, 255, 0.42);
+}
+.iconCyan {
+  background: linear-gradient(135deg, var(--cyan), var(--cyan-2));
+  box-shadow: 0 8px 22px rgba(0, 224, 255, 0.35);
+}
+.iconPink {
+  background: linear-gradient(135deg, var(--pink), var(--pink-2));
+  box-shadow: 0 8px 22px rgba(255, 77, 157, 0.35);
+}
+.iconGreen {
+  background: linear-gradient(135deg, var(--green), var(--green-2));
+  box-shadow: 0 8px 22px rgba(36, 209, 138, 0.35);
+}
+
+.cardHead h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.cardHead p {
+  margin: 3px 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   GRID & FIELDS
+========================================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fieldIcon {
+  position: absolute;
+  left: 14px;
+  font-size: 1rem;
+  color: var(--purple);
+  pointer-events: none;
+  transition: color 0.2s ease;
+  z-index: 1;
+}
+
+.field input,
+.field select,
+.selectInline,
+.textarea {
+  width: 100%;
+  padding: 13px 16px 13px 42px;
+  border-radius: 13px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.22s ease;
+  color-scheme: dark;
+}
+
+.field input[type="date"] {
+  padding-right: 14px;
+}
+
+.field input::placeholder,
+.textarea::placeholder {
+  color: var(--muted-2);
+}
+
+.field input:focus,
+.field select:focus,
+.textarea:focus,
+.selectInline:focus {
+  border-color: var(--purple);
+  background: rgba(124, 92, 255, 0.09);
+  box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.18);
+}
+
+.field:focus-within .fieldIcon {
+  color: var(--cyan);
+}
+
+.textarea {
+  padding: 13px 16px 13px 42px;
+  min-height: 92px;
+  resize: vertical;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.selectInline {
+  appearance: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--purple) 50%),
+    linear-gradient(135deg, var(--purple) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) center,
+    calc(100% - 14px) center;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+}
+
+.selectInline option {
+  background: #0e0e1c;
+  color: var(--text);
+}
+
+.regenBtn {
+  position: absolute;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.regenBtn:hover {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  border-color: transparent;
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   ITEMS
+========================================================= */
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.itemRow {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 140px 110px minmax(120px, 0.8fr) 36px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s ease;
+}
+
+.itemRow:focus-within {
+  border-color: rgba(124, 92, 255, 0.45);
+}
+
+.itemNum {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 6px 16px rgba(124, 92, 255, 0.35);
+}
+
+.itemDesc,
+.itemPrice,
+.itemRow input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.86rem;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  transition: all 0.2s ease;
+  color-scheme: dark;
+}
+
+.itemRow input::placeholder {
+  color: var(--muted-2);
+}
+
+.itemRow input:focus {
+  border-color: var(--purple);
+  background: rgba(124, 92, 255, 0.09);
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.16);
+}
+
+.qtyWrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.qtyWrap button {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.qtyWrap button:hover {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: #fff;
+}
+
+.qtyWrap input {
+  width: 44px;
+  text-align: center;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  box-shadow: none !important;
+  color-scheme: dark;
+}
+
+.qtyWrap input:focus {
+  background: transparent;
+  box-shadow: none !important;
+}
+
+.itemAmount {
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--cyan);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeItem {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.08);
+  color: #ffcdd2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.removeItem:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.removeItem:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.addItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #cfe9ff;
+  border: 1px dashed rgba(0, 224, 255, 0.5);
+  background: rgba(0, 224, 255, 0.06);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.addItem:hover {
+  background: rgba(0, 224, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  animation: rise 0.4s ease both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 22px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btnPrimary {
+  color: #fff;
+  background: linear-gradient(120deg, var(--purple), var(--pink) 50%, var(--cyan));
+  background-size: 200% 100%;
+  box-shadow: 0 14px 34px rgba(124, 92, 255, 0.45);
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(255, 77, 157, 0.45);
+}
+
+.btnGhost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.btnGhost:hover:not(:disabled) {
+  background: rgba(0, 224, 255, 0.14);
+  border-color: rgba(0, 224, 255, 0.55);
+  transform: translateY(-2px);
+}
+
+.btnGreen {
+  color: #fff;
+  background: linear-gradient(135deg, var(--green), var(--green-2));
+  box-shadow: 0 12px 30px rgba(36, 209, 138, 0.45);
+}
+
+.btnGreen:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(36, 209, 138, 0.55);
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+/* =========================================================
+   SAVED INVOICES (SIDEBAR)
+========================================================= */
+.listCol {
+  position: sticky;
+  top: 20px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.listCol::-webkit-scrollbar {
+  width: 8px;
+}
+.listCol::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--purple), var(--pink));
+  border-radius: 999px;
+}
+.listCol::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+}
+
+.listHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.listHead svg {
+  color: var(--cyan);
+  font-size: 1.05rem;
+}
+
+.listHead h2 {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  flex: 1;
+}
+
+.count {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 6px 16px rgba(124, 92, 255, 0.4);
+}
+
+.listEmpty {
+  padding: 16px 14px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.listEmpty svg {
+  color: var(--purple);
+  font-size: 1rem;
+}
+
+/* =========================================================
+   SAVED ITEM CARD
+========================================================= */
+.savedItem {
+  position: relative;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.035);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.savedItem:hover {
+  border-color: rgba(124, 92, 255, 0.55);
+  background: rgba(124, 92, 255, 0.07);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(124, 92, 255, 0.18);
+}
+
+.savedItem:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.savedItemActive {
+  border-color: rgba(0, 224, 255, 0.65) !important;
+  background: linear-gradient(120deg, rgba(0, 224, 255, 0.14), rgba(124, 92, 255, 0.08)) !important;
+  box-shadow: 0 12px 30px rgba(0, 224, 255, 0.22);
+}
+
+.savedItemEditing {
+  border-color: rgba(124, 92, 255, 0.6) !important;
+  background: linear-gradient(120deg, rgba(124, 92, 255, 0.14), rgba(255, 77, 157, 0.08)) !important;
+  box-shadow: 0 12px 30px rgba(124, 92, 255, 0.25);
+}
+
+.savedItemTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.savedNum {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--cyan);
+  font-family: "Consolas", "Monaco", monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.savedStatus {
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.status_pending {
+  color: #ffe1a8;
+  background: rgba(245, 165, 36, 0.14);
+  border: 1px solid rgba(245, 165, 36, 0.45);
+}
+
+.status_paid {
+  color: #c8ffea;
+  background: rgba(36, 209, 138, 0.14);
+  border: 1px solid rgba(36, 209, 138, 0.45);
+}
+
+.status_cancelled {
+  color: #ffc3d8;
+  background: rgba(255, 77, 157, 0.14);
+  border: 1px solid rgba(255, 77, 157, 0.45);
+}
+
+.savedClient {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.savedBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.savedTotal {
+  font-size: 0.94rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.savedHint {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(0, 224, 255, 0.12);
+  border: 1px solid rgba(0, 224, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.savedItem:hover .savedHint {
+  background: rgba(0, 224, 255, 0.22);
+  transform: translateX(2px);
+}
+
+.savedActions {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.savedItem:hover .savedActions {
+  opacity: 1;
+}
+
+.savedAction {
+  flex: 1;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.savedAction:hover {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+.savedActionDanger {
+  color: #ffcdd2;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.savedActionDanger:hover {
+  background: linear-gradient(135deg, var(--red), var(--pink-2));
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 12, 0.82);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  animation: fade 0.25s ease both;
+}
+
+.modal {
+  width: 100%;
+  max-width: 820px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(160deg, rgba(20, 20, 40, 0.98), rgba(14, 14, 28, 0.98));
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+  animation: pop 0.3s ease both;
+  margin: auto;
+  overflow: hidden;
+}
+
+.modalHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.modalHead h3 {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  flex-wrap: wrap;
+}
+
+.modalHead h3 svg {
+  color: var(--cyan);
+}
+
+.modalTag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: #cfe9ff;
+  background: rgba(0, 224, 255, 0.14);
+  border: 1px solid rgba(0, 224, 255, 0.45);
+}
+
+.modalClose {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.modalClose:hover:not(:disabled) {
+  background: rgba(255, 77, 157, 0.22);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.modalBody {
+  padding: 20px 22px 22px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}
+
+/* =========================================================
+   INVOICE DOCUMENT
+========================================================= */
+.invoice {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(165deg, rgba(19, 19, 34, 0.98), rgba(10, 10, 22, 1));
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.invoiceInner {
+  position: relative;
+  z-index: 2;
+  padding: 28px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------- Invoice header ---------- */
+.invHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 18px;
+  border-bottom: 2px solid rgba(124, 92, 255, 0.25);
+}
+
+.invHeadLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.invoiceLogo {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 26px rgba(124, 92, 255, 0.5);
+}
+
+.brandMark h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.brandMark p {
+  margin: 3px 0 0;
+  font-size: 0.74rem;
+  color: var(--muted);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.bizInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.invHeadRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: right;
+}
+
+.invTag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  color: #cfe9ff;
+  background: rgba(0, 224, 255, 0.12);
+  border: 1px solid rgba(0, 224, 255, 0.4);
+}
+
+.invNum {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: var(--text);
+  font-family: "Consolas", "Monaco", monospace;
+}
+
+.invStatus {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+/* ---------- Invoice meta ---------- */
+.invMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.invMetaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+}
+
+.invMetaLabel {
+  font-size: 0.66rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.invMetaLabel:first-child {
+  margin-top: 0;
+}
+
+.invMetaBlock strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.invMetaBlock span:not(.invMetaLabel) {
+  font-size: 0.82rem;
+  color: var(--text-2);
+}
+
+/* ---------- Invoice table ---------- */
+.invTableWrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.invTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.invTable thead {
+  background:
+    linear-gradient(135deg, rgba(124, 92, 255, 0.18), rgba(0, 224, 255, 0.1));
+}
+
+.invTable th {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #cfe9ff;
+}
+
+.invTable td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.invTable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.colNum {
+  width: 40px;
+  text-align: center;
+}
+
+.colQty {
+  width: 60px;
+  text-align: center;
+}
+
+.colPrice {
+  width: 130px;
+  text-align: right;
+}
+
+.colAmt {
+  width: 140px;
+  text-align: right;
+  font-weight: 800;
+  color: var(--cyan);
+}
+
+/* ---------- Invoice totals ---------- */
+.invTotals {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.invTotalsRows {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.invTotalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 14px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  font-size: 0.86rem;
+}
+
+.invTotalRow span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.invTotalRow strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.invDiscount strong {
+  color: var(--green);
+}
+
+.invGrand {
+  background:
+    linear-gradient(135deg, rgba(36, 209, 138, 0.16), rgba(0, 224, 255, 0.1));
+  border-color: rgba(36, 209, 138, 0.5);
+  padding: 13px 16px;
+  margin-top: 6px;
+}
+
+.invGrand span {
+  color: #c8ffea;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.invGrand strong {
+  font-size: 1.28rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Invoice note ---------- */
+.invNote {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(0, 224, 255, 0.06);
+  border: 1px dashed rgba(0, 224, 255, 0.4);
+}
+
+.invNote p {
+  margin: 4px 0 0;
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* ---------- Payment / legal notice ---------- */
+.payNote {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background:
+    linear-gradient(120deg, rgba(36, 209, 138, 0.14), rgba(0, 224, 255, 0.08));
+  border: 1px solid rgba(36, 209, 138, 0.45);
+}
+
+.payIcon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #fff;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, var(--green), var(--cyan));
+  box-shadow: 0 10px 26px rgba(36, 209, 138, 0.45);
+}
+
+.payNote strong {
+  display: block;
+  font-size: 0.82rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #c8ffea;
+  margin-bottom: 3px;
+}
+
+.payNote p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SIGNATURE  +  ADMIN STAMP
+========================================================= */
+.signature {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 24px 22px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  margin-top: 18px;
+  overflow: visible;
+}
+
+/* ═══════ ADMIN RED STAMP — hejuru ya signature ═══════ */
+.signature::before {
+  content: "ADMIN";
+  position: absolute;
+  top: -22px;
+  right: 28px;
+  padding: 6px 22px 8px;
+  border: 4px double #ff2d55;
+  border-radius: 10px;
+  color: #ff2d55;
+  font-family: "Arial Black", Impact, "Helvetica Neue", sans-serif;
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  line-height: 1;
+  transform: rotate(-10deg);
+  opacity: 0.85;
+  background: rgba(255, 45, 85, 0.06);
+  box-shadow:
+    0 0 22px rgba(255, 45, 85, 0.35),
+    inset 0 0 14px rgba(255, 45, 85, 0.12);
+  text-shadow: 0 0 10px rgba(255, 45, 85, 0.55);
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* Udukurira duto duteguye ku mpera z'ikashe */
+.signature::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 18px;
+  width: 200px;
+  height: 70px;
+  border: 2px solid rgba(255, 45, 85, 0.35);
+  border-radius: 14px;
+  transform: rotate(-10deg);
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 5;
+}
+
+.signatureBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 220px;
+}
+
+.signatureLabel {
+  font-size: 0.66rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.signatureScript {
+  font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--cyan);
+  letter-spacing: 2px;
+  text-shadow: 0 4px 18px rgba(0, 224, 255, 0.35);
+  margin: 6px 0 -4px;
+}
+
+.signatureLine {
+  display: block;
+  height: 1px;
+  width: 100%;
+  max-width: 260px;
+  background: linear-gradient(90deg, var(--cyan), transparent);
+  margin-bottom: 8px;
+}
+
+.signatureName {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.signatureTitle {
+  font-size: 0.74rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.signatureMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.signatureDate {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* =========================================================
+   INVOICE FOOTER
+========================================================= */
+.invFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.74rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* =========================================================
+   WATERMARK (background)
+========================================================= */
+.watermark {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.watermarkLines {
+  position: absolute;
+  inset: -10%;
+  background-image: repeating-linear-gradient(
+    -32deg,
+    transparent 0,
+    transparent 120px,
+    rgba(255, 77, 157, 0.05) 120px,
+    rgba(255, 77, 157, 0.05) 122px
+  );
+}
+
+.watermarkGrid {
+  position: absolute;
+  inset: -30%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 50px 40px;
+  transform: rotate(-30deg);
+  padding: 40px;
+}
+
+.watermarkItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial Black", Impact, "Helvetica Neue", sans-serif;
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(255, 77, 157, 0.09);
+  border: 2px solid rgba(255, 77, 157, 0.12);
+  border-radius: 10px;
+  padding: 10px 18px;
+  transform: rotate(6deg);
+}
+
+.watermarkAlt {
+  color: rgba(255, 0, 0, 0.09);
+  border-color: rgba(255, 0, 0, 0.14);
+  transform: rotate(-6deg);
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 120;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  max-width: min(440px, calc(100vw - 36px));
+  padding: 15px 18px;
+  border-radius: 16px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.5;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.35s ease both;
+}
+
+.toast svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  font-size: 1.15rem;
+}
+
+.toastOk {
+  color: #d6ffee;
+  background: rgba(14, 60, 45, 0.9);
+  border: 1px solid rgba(36, 209, 138, 0.5);
+}
+.toastOk svg {
+  color: var(--green);
+}
+
+.toastErr {
+  color: #ffe0ee;
+  background: rgba(66, 12, 40, 0.9);
+  border: 1px solid rgba(255, 77, 157, 0.5);
+}
+.toastErr svg {
+  color: var(--pink);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/* ---------- Tablet (~980px) ---------- */
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .listCol {
+    position: static;
+    max-height: none;
+  }
+
+  .itemRow {
+    grid-template-columns: 34px minmax(0, 1fr) 130px 100px minmax(100px, 0.8fr) 34px;
+  }
+}
+
+/* ---------- Small tablet / big phone (~720px) ---------- */
+@media (max-width: 720px) {
+  .itemRow {
+    grid-template-columns: 30px minmax(0, 1fr) 32px;
+    grid-template-areas:
+      "num desc remove"
+      "num qty qty"
+      "num price price"
+      "num amt amt";
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .itemNum {
+    grid-area: num;
+    align-self: start;
+  }
+  .itemDesc {
+    grid-area: desc;
+  }
+  .qtyWrap {
+    grid-area: qty;
+    justify-self: start;
+  }
+  .itemPrice {
+    grid-area: price;
+  }
+  .itemAmount {
+    grid-area: amt;
+    text-align: left;
+  }
+  .removeItem {
+    grid-area: remove;
+  }
+
+  .invoiceInner {
+    padding: 22px 20px 18px;
+  }
+
+  .invTable th,
+  .invTable td {
+    padding: 10px 10px;
+  }
+}
+
+/* ---------- Phone (~560px) ---------- */
+@media (max-width: 560px) {
+  .page {
+    padding: 16px 12px 80px;
+  }
+
+  .hero,
+  .card,
+  .listCol {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .heroIcon {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    border-radius: 13px;
+    font-size: 1.2rem;
+  }
+
+  .heroText h1 {
+    font-size: 1.2rem;
+  }
+
+  .heroText p {
+    font-size: 0.78rem;
+  }
+
+  .badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .editingBanner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .editingText {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+
+  .actions .btn {
+    width: 100%;
+  }
+
+  .modalOverlay {
+    padding: 8px;
+    align-items: flex-start;
+  }
+
+  .modal {
+    border-radius: 16px;
+    max-width: none;
+  }
+
+  .modalHead {
+    padding: 14px 16px;
+  }
+
+  .modalBody {
+    padding: 14px;
+  }
+
+  .modalActions {
+    flex-direction: column-reverse;
+  }
+
+  .modalActions .btn {
+    width: 100%;
+  }
+
+  .invoiceInner {
+    padding: 18px 14px 16px;
+    gap: 16px;
+  }
+
+  .invHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .invHeadRight {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .brandMark h2 {
+    font-size: 1rem;
+  }
+
+  .invoiceLogo {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+    border-radius: 12px;
+  }
+
+  .invMeta {
+    grid-template-columns: 1fr;
+  }
+
+  .invTable th,
+  .invTable td {
+    padding: 8px 6px;
+    font-size: 0.78rem;
+  }
+
+  .colPrice,
+  .colAmt {
+    width: auto;
+  }
+
+  .invTotalsRows {
+    max-width: none;
+  }
+
+  .invGrand strong {
+    font-size: 1.1rem;
+  }
+
+  .payNote {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .signature {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 16px 16px;
+    gap: 16px;
+  }
+
+  .signature::before {
+    top: -18px;
+    right: 12px;
+    padding: 5px 14px 6px;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    border-width: 3px;
+  }
+
+  .signature::after {
+    top: -24px;
+    right: 8px;
+    width: 150px;
+    height: 56px;
+  }
+
+  .signatureMeta {
+    align-items: flex-start;
+  }
+
+  .signatureScript {
+    font-size: 1.9rem;
+  }
+
+  .invFoot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .watermarkGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+
+  .watermarkItem {
+    letter-spacing: 4px;
+    padding: 8px 12px;
+  }
+
+  .toast {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+}
+
+/* ---------- Tiny phone (~380px) ---------- */
+@media (max-width: 380px) {
+  .heroText h1 {
+    font-size: 1.05rem;
+  }
+
+  .brandMark h2 {
+    font-size: 0.95rem;
+  }
+
+  .invNum {
+    font-size: 0.92rem;
+  }
+
+  .signatureScript {
+    font-size: 1.7rem;
+  }
+
+  .signature::before {
+    font-size: 1.05rem;
+    letter-spacing: 4px;
+    padding: 4px 12px 5px;
+  }
+
+  .signature::after {
+    width: 130px;
+    height: 50px;
+  }
+
+  .invGrand strong {
+    font-size: 1rem;
+  }
+
+  .itemRow {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .hero,
+  .card,
+  .listCol,
+  .modal,
+  .modalOverlay,
+  .toast,
+  .spin,
+  .btn,
+  .editingBanner {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.btn:focus-visible,
+.field input:focus-visible,
+.field select:focus-visible,
+.selectInline:focus-visible,
+.textarea:focus-visible,
+.itemRow input:focus-visible,
+.addItem:focus-visible,
+.savedAction:focus-visible,
+.savedDelete:focus-visible,
+.modalClose:focus-visible,
+.regenBtn:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}

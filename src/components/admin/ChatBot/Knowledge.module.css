@@ -1,0 +1,579 @@
+/* ======================================== */
+/* ===== KNOWLEDGE MODULE CSS ===== */
+/* ======================================== */
+
+/* ===== CONTAINER WRAPPER ===== */
+.container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+/* ===== FORM STYLES ===== */
+.form {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 32px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form input[readOnly] {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form button {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.form button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2dd466, #1a9d8a);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form button:hover:not(:disabled)::before {
+  opacity: 1;
+}
+
+.form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+}
+
+.form button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======================================== */
+/* ===== TABLE / CARD STYLES ===== */
+/* ======================================== */
+
+.tableWrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  padding-top: 80px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 700px;
+}
+
+.table thead {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(18, 140, 126, 0.15));
+  border-bottom: 2px solid rgba(37, 211, 102, 0.2);
+}
+
+.table thead th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #25d366;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(37, 211, 102, 0.04);
+}
+
+.table tbody td {
+  padding: 14px 20px;
+  color: rgba(255, 255, 255, 0.85);
+  vertical-align: middle;
+}
+
+.table tbody td:first-child {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.table tbody td .keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.table tbody td .keywordTag {
+  display: inline-block;
+  padding: 2px 10px;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.15);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #25d366;
+  white-space: nowrap;
+}
+
+.table tbody td .actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ===== BUTTONS IN TABLE ===== */
+.btnEdit,
+.btnDelete,
+.btnAnswer {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btnEdit {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+}
+
+.btnEdit:hover {
+  background: rgba(37, 211, 102, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.btnDelete {
+  background: rgba(255, 59, 48, 0.15);
+  color: #ff3b30;
+}
+
+.btnDelete:hover {
+  background: rgba(255, 59, 48, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 59, 48, 0.2);
+}
+
+.btnAnswer {
+  background: rgba(0, 122, 255, 0.15);
+  color: #007aff;
+}
+
+.btnAnswer:hover {
+  background: rgba(0, 122, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2);
+}
+
+/* ======================================== */
+/* ===== CARD VIEW (Mobile) ===== */
+/* ======================================== */
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  margin-top: 80px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(37, 211, 102, 0.15);
+}
+
+.card h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.card small {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card .actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card .keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.card .keywordTag {
+  display: inline-block;
+  padding: 2px 10px;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.15);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #25d366;
+}
+
+/* ======================================== */
+/* ===== LOADING & EMPTY STATES ===== */
+/* ======================================== */
+
+.loadingState,
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  padding-top: 80px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+}
+
+.loadingState::before {
+  content: '⏳';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 16px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.emptyState::before {
+  content: '📭';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+/* ======================================== */
+/* ===== RESPONSIVE DESIGN ===== */
+/* ======================================== */
+
+/* ===== TABLETS ===== */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+  }
+
+  .form {
+    padding: 24px 20px;
+    margin: 60px 10px;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .form button {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+
+  .tableWrapper {
+    border-radius: 12px;
+    padding-top: 60px;
+  }
+
+  .table {
+    font-size: 0.85rem;
+    min-width: 500px;
+  }
+
+  .table thead th {
+    padding: 12px 16px;
+    font-size: 0.75rem;
+  }
+
+  .table tbody td {
+    padding: 10px 16px;
+  }
+
+  .btnEdit,
+  .btnDelete,
+  .btnAnswer {
+    padding: 4px 12px;
+    font-size: 0.7rem;
+  }
+
+  .card {
+    margin-top: 60px;
+  }
+
+  .loadingState,
+  .emptyState {
+    padding-top: 60px;
+  }
+}
+
+/* ===== MOBILE PHONES ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+    padding-top: 40px;
+  }
+
+  .form {
+    padding: 16px 12px;
+    margin: 40px 4px;
+    border-radius: 14px;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .form textarea {
+    min-height: 100px;
+  }
+
+  .form button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  /* Hide table on mobile, show cards */
+  .tableWrapper {
+    display: none;
+  }
+
+  .card {
+    display: block;
+    padding: 16px;
+    margin-top: 40px;
+  }
+
+  .card h4 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .btnEdit,
+  .btnDelete,
+  .btnAnswer {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+
+  .loadingState,
+  .emptyState {
+    padding: 40px 16px;
+    padding-top: 40px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== DESKTOP (Hide cards) ===== */
+@media (min-width: 481px) {
+  .card {
+    display: none;
+  }
+}
+
+/* ======================================== */
+/* ===== DARK MODE ===== */
+/* ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  .form {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+  }
+
+  .table {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .table thead {
+    background: rgba(37, 211, 102, 0.08);
+  }
+
+  .table tbody tr:hover {
+    background: rgba(37, 211, 102, 0.04);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .card:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ======================================== */
+/* ===== SCROLLBAR ===== */
+/* ======================================== */
+
+.tableWrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #25d366, #128c7e);
+  border-radius: 10px;
+}
+
+.tableWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #25d366 transparent;
+}
+
+/* ======================================== */
+/* ===== PAGE HEADER SPACING ===== */
+/* ======================================== */
+
+.pageHeader {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pageHeader h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pageHeader p {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 8px 0 0 0;
+  font-size: 1rem;
+}
+
+/* ======================================== */
+/* ===== UTILITY ===== */
+/* ======================================== */
+
+.textCenter {
+  text-align: center;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}

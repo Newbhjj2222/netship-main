@@ -1,0 +1,140 @@
+.explore {
+  min-height: 100vh;
+  background: #070b1a;
+  color: white;
+  margin-top: 60px;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #4da3ff;
+}
+
+.intro {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(77, 163, 255, 0.15);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #4da3ff;
+  box-shadow: 0 10px 25px rgba(77, 163, 255, 0.2);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #4da3ff;
+  margin-bottom: 18px;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.card p {
+  color: #d1d5db;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  min-height: 90px;
+}
+
+.card button {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #2563eb
+  );
+}
+
+@media (max-width: 768px) {
+  .explore {
+    padding: 40px 15px;
+  }
+
+  .container h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 1.9rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .card button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

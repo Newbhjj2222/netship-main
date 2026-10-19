@@ -1,0 +1,104 @@
+.page {
+  min-height: 100vh;
+  background: #070b1a;
+  margin-top: 60px;
+  padding: 40px 15px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #94a3b8;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.status {
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: #60a5fa;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card input,
+.card textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #111827;
+  color: white;
+  outline: none;
+}
+
+.card textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.card input:focus,
+.card textarea:focus {
+  border-color: #2563eb;
+}
+
+.card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

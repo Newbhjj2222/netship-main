@@ -1,0 +1,672 @@
+/* ============================================
+   NAVBAR - FIXED
+============================================ */
+.navbar {
+  position: fixed;
+  top: 62px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(13, 21, 32, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================
+   NAV SPACER (prevents content from hiding behind fixed navbar)
+============================================ */
+.navSpacer {
+  height: 64px;
+  width: 100%;
+}
+
+/* ============================================
+   NAV CONTAINER
+============================================ */
+.navContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 64px;
+}
+
+/* ============================================
+   LOGO
+============================================ */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.logoText {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #e0e0e0;
+  letter-spacing: -0.5px;
+}
+
+.logoHighlight {
+  color: #60a5fa;
+}
+
+.logoSub {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   DESKTOP LINKS - WITH HORIZONTAL SCROLL
+============================================ */
+.desktopLinksWrapper {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #2a3344 transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.desktopLinksWrapper::-webkit-scrollbar {
+  height: 3px;
+}
+
+.desktopLinksWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.desktopLinksWrapper::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 3px;
+}
+
+.desktopLinksWrapper::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}
+
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  white-space: nowrap;
+  padding: 0.25rem 0;
+}
+
+/* ============================================
+   NAV LINK
+============================================ */
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.navLink:hover {
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navLink.active {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.navIcon {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.navLabel {
+  font-size: 0.75rem;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 3px;
+  background: #60a5fa;
+  border-radius: 2px;
+}
+
+/* ============================================
+   USER SECTION
+============================================ */
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.userAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0a0e17;
+  flex-shrink: 0;
+}
+
+.userName {
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutBtn:hover {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+/* ============================================
+   HAMBURGER (mobile only)
+============================================ */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   SIDEBAR (Mobile)
+============================================ */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  max-width: 80%;
+  height: 100vh;
+  background: #121926;
+  padding: 1.5rem 1rem;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1002;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.sidebarOpen {
+  left: 0;
+}
+
+/* ============================================
+   SIDEBAR HEADER
+============================================ */
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.sidebarCloseBtn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.sidebarCloseBtn:hover {
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   SIDEBAR USER INFO
+============================================ */
+.sidebarUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.sidebarAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0a0e17;
+  flex-shrink: 0;
+}
+
+.sidebarUserDetails {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebarUserName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.sidebarUserRole {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* ============================================
+   SIDEBAR LINKS
+============================================ */
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.sidebarNavLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.sidebarNavLink:hover {
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebarNavLink.sidebarActive {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.sidebarNavIcon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  width: 24px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebarNavLabel {
+  flex: 1;
+}
+
+.sidebarActiveIndicator {
+  color: #60a5fa;
+  font-size: 0.6rem;
+}
+
+/* ============================================
+   SIDEBAR FOOTER
+============================================ */
+.sidebarFooter {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: auto;
+}
+
+.sidebarLogoutBtn {
+  width: 100%;
+  padding: 0.7rem;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sidebarLogoutBtn:hover {
+  background: rgba(248, 113, 113, 0.2);
+}
+
+/* ============================================
+   OVERLAY
+============================================ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1001;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   SIDEBAR ANIMATION
+============================================ */
+.sidebar.sidebarOpen {
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+/* ===== TABLET & SMALL DESKTOP ===== */
+@media (max-width: 1024px) {
+  .desktopLinksWrapper {
+    margin: 0 0.25rem;
+  }
+
+  .navLink {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .navLabel {
+    font-size: 0.7rem;
+  }
+
+  .userName {
+    max-width: 70px;
+    font-size: 0.75rem;
+  }
+
+  .userAvatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .desktopLinksWrapper {
+    display: none;
+  }
+
+  .userSection {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navContainer {
+    padding: 0 1rem;
+    height: 60px;
+  }
+
+  .navbar {
+    height: 60px;
+  }
+
+  .navSpacer {
+    height: 60px;
+  }
+
+  .logoText {
+    font-size: 1.2rem;
+  }
+
+  .logoSub {
+    font-size: 0.55rem;
+  }
+
+  .sidebar {
+    width: 280px;
+    padding: 1.25rem 0.9rem;
+  }
+
+  .sidebarAvatar {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+
+  .sidebarUserName {
+    font-size: 0.95rem;
+  }
+
+  .sidebarNavLink {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebarNavIcon {
+    font-size: 1rem;
+    width: 22px;
+  }
+
+  .sidebarLogoutBtn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 400px) {
+  .navContainer {
+    padding: 0 0.75rem;
+    height: 56px;
+  }
+
+  .navbar {
+    height: 56px;
+  }
+
+  .navSpacer {
+    height: 56px;
+  }
+
+  .logoText {
+    font-size: 1.1rem;
+  }
+
+  .logoSub {
+    font-size: 0.5rem;
+  }
+
+  .hamburger {
+    font-size: 1.2rem;
+  }
+
+  .sidebar {
+    width: 260px;
+    padding: 1rem 0.75rem;
+  }
+
+  .sidebarAvatar {
+    width: 38px;
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .sidebarUserName {
+    font-size: 0.85rem;
+  }
+
+  .sidebarUserRole {
+    font-size: 0.65rem;
+  }
+
+  .sidebarNavLink {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .sidebarNavIcon {
+    font-size: 0.9rem;
+    width: 20px;
+  }
+
+  .sidebarLogoutBtn {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .sidebarHeader {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .sidebarUserInfo {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .sidebarFooter {
+    padding-top: 1rem;
+  }
+}
+
+/* ============================================
+   SCROLLBAR (sidebar)
+============================================ */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+.navLink:focus-visible,
+.hamburger:focus-visible,
+.logoutBtn:focus-visible,
+.sidebarNavLink:focus-visible,
+.sidebarLogoutBtn:focus-visible,
+.sidebarCloseBtn:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SELECTION
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}

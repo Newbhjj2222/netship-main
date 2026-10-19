@@ -1,0 +1,160 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #080b18;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 10, 25, 0.92) 0%,
+      rgba(7, 10, 25, 0.65) 45%,
+      rgba(7, 10, 25, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(130, 70, 255, 0.15),
+      rgba(0, 0, 0, 0.2)
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 520px;
+  padding: 70px 40px;
+  color: white;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  line-height: 1.1;
+}
+
+.content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f3f3f3;
+  line-height: 1.1;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #d5d5d5;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6d28d9
+  );
+
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary:hover {
+  opacity: 0.9;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.activeDot {
+  background: white;
+  width: 24px;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 350px;
+  }
+
+  .content {
+    padding: 40px 20px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+}

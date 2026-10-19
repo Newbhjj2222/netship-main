@@ -1,0 +1,561 @@
+/* =====================================================
+   BALANCE PAGE
+   Dark • Responsive • Modern • Mobile First
+===================================================== */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 20px 60px;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(0, 212, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(124, 58, 237, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #070b14 0%,
+      #0b1020 45%,
+      #080c16 100%
+    );
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   USER INFO
+===================================================== */
+
+.userInfo {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 18px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 29, 48, 0.92),
+      rgba(12, 18, 32, 0.96)
+    );
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-sizing: border-box;
+}
+
+.userInfo h3 {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   BALANCE CARD
+===================================================== */
+
+.balanceCard {
+  width: 100%;
+  max-width: 720px;
+  padding: 28px;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(34, 211, 238, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(139, 92, 246, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #111827,
+      #0b1220
+    );
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.38),
+    0 0 50px rgba(14, 165, 233, 0.05);
+  box-sizing: border-box;
+}
+
+.balanceCard::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: -70px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.08);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.balanceCard > div {
+  position: relative;
+  z-index: 1;
+}
+
+.balanceCard p {
+  margin: 7px 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.balanceCard p:first-child {
+  color: #67e8f9;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.balanceCard h2 {
+  position: relative;
+  z-index: 1;
+  margin: 24px 0 22px;
+  padding: 18px;
+  border-radius: 16px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(16, 185, 129, 0.14),
+      rgba(34, 211, 238, 0.08)
+    );
+  border: 1px solid rgba(52, 211, 153, 0.15);
+  color: #6ee7b7;
+  font-size: clamp(26px, 5vw, 38px);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: -0.8px;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form {
+  width: 100%;
+  max-width: 720px;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 24, 39, 0.97),
+      rgba(10, 15, 27, 0.98)
+    );
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form input,
+.form select {
+  width: 100%;
+  min-height: 52px;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border: 1px solid #263449;
+  border-radius: 13px;
+  outline: none;
+  background:
+    linear-gradient(
+      145deg,
+      #111827,
+      #0d1422
+    );
+  color: #f8fafc;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.form input::placeholder {
+  color: #64748b;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #22d3ee;
+  box-shadow:
+    0 0 0 3px rgba(34, 211, 238, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.2);
+  background: #111c2d;
+}
+
+.form input:hover:not(:disabled),
+.form select:hover:not(:disabled) {
+  border-color: #3b4c67;
+}
+
+.form input:disabled,
+.form select:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.form select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* =====================================================
+   PHONE INFO
+===================================================== */
+
+.form small {
+  display: block;
+  margin-top: -6px;
+  margin-bottom: 18px;
+  padding-left: 4px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   AMOUNT PREVIEW
+===================================================== */
+
+.form > p {
+  margin: 10px 0 16px;
+  padding: 13px 15px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.07);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form > p strong {
+  color: #60a5fa;
+  font-weight: 800;
+}
+
+/* =====================================================
+   ALL BUTTONS
+===================================================== */
+
+.balanceCard button,
+.form button,
+.errorCard button {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* =====================================================
+   BONUS BUTTON
+===================================================== */
+
+.balanceCard button {
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1
+    );
+  box-shadow:
+    0 10px 30px rgba(99, 102, 241, 0.22);
+}
+
+.balanceCard button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 35px rgba(99, 102, 241, 0.32);
+  filter: brightness(1.08);
+}
+
+.balanceCard button:active:not(:disabled),
+.form button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* =====================================================
+   WITHDRAW BUTTON
+===================================================== */
+
+.form button {
+  margin-top: 8px;
+  background:
+    linear-gradient(
+      135deg,
+      #06b6d4,
+      #0ea5e9
+    );
+  box-shadow:
+    0 12px 32px rgba(14, 165, 233, 0.2);
+}
+
+.form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 38px rgba(14, 165, 233, 0.32);
+  filter: brightness(1.08);
+}
+
+/* =====================================================
+   DISABLED BUTTON
+===================================================== */
+
+.balanceCard button:disabled,
+.form button:disabled,
+.errorCard button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  filter: grayscale(0.25);
+}
+
+/* =====================================================
+   ERROR CARD
+===================================================== */
+
+.errorCard {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 22px;
+  border: 1px solid rgba(248, 113, 113, 0.18);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(45, 20, 28, 0.96),
+      rgba(25, 15, 22, 0.98)
+    );
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.errorCard h2 {
+  margin: 0 0 15px;
+  color: #fca5a5;
+  font-size: 24px;
+}
+
+.errorCard p {
+  margin: 0 0 24px;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.errorCard button {
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    );
+  box-shadow:
+    0 10px 30px rgba(239, 68, 68, 0.2);
+}
+
+.errorCard button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px 45px;
+  }
+
+  .userInfo {
+    padding: 16px 18px;
+    border-radius: 16px;
+  }
+
+  .balanceCard,
+  .form {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .balanceCard h2 {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 11px 35px;
+  }
+
+  .userInfo {
+    padding: 14px 15px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+  }
+
+  .userInfo h3 {
+    font-size: 16px;
+  }
+
+  .balanceCard,
+  .form {
+    padding: 17px;
+    border-radius: 18px;
+  }
+
+  .balanceCard {
+    margin-bottom: 14px;
+  }
+
+  .balanceCard p {
+    font-size: 13px;
+  }
+
+  .balanceCard p:first-child {
+    font-size: 16px;
+  }
+
+  .balanceCard h2 {
+    margin: 17px 0;
+    padding: 15px 10px;
+    border-radius: 13px;
+    font-size: 25px;
+  }
+
+  .form input,
+  .form select {
+    min-height: 50px;
+    padding: 13px 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .form small {
+    font-size: 11px;
+  }
+
+  .balanceCard button,
+  .form button,
+  .errorCard button {
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .form > p {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .errorCard {
+    padding: 23px 18px;
+    border-radius: 18px;
+  }
+
+  .errorCard h2 {
+    font-size: 21px;
+  }
+}
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .balanceCard,
+  .form {
+    padding: 14px;
+  }
+
+  .balanceCard h2 {
+    font-size: 22px;
+  }
+
+  .form input,
+  .form select {
+    font-size: 13px;
+  }
+
+  .balanceCard button,
+  .form button {
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .balanceCard button,
+  .form button,
+  .errorCard button,
+  .form input,
+  .form select {
+    transition: none;
+  }
+}

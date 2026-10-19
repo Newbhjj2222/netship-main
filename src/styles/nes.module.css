@@ -1,0 +1,762 @@
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  min-height: 100vh;
+  background: #0a0e17;
+  padding: 2rem 1.5rem 4rem;
+  margin-top: 65px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+/* ============================================
+   CARD
+============================================ */
+.card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #121926;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headerIcon {
+  font-size: 1.8rem;
+  color: #60a5fa;
+  -webkit-text-fill-color: initial;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   MESSAGE
+============================================ */
+.message {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  color: #34d399;
+}
+
+.message.error {
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  color: #f87171;
+}
+
+.messageIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   CONTROLS (Search + Select)
+============================================ */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.searchWrapper {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.searchInput::placeholder {
+  color: #64748b;
+}
+
+.selectWrapper {
+  flex: 1;
+  min-width: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectIcon {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+}
+
+.documentSelect {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+}
+
+.documentSelect:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.documentSelect option {
+  background: #1a2332;
+  color: #e0e0e0;
+}
+
+.primaryBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
+}
+
+/* ============================================
+   SELECTED USER INFO
+============================================ */
+.selectedInfo {
+  margin-bottom: 1.5rem;
+}
+
+.userBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-radius: 30px;
+}
+
+.userBadgeIcon {
+  color: #60a5fa;
+  font-size: 0.9rem;
+}
+
+.userBadgeName {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   TABLE WRAPPER
+============================================ */
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   TABLE
+============================================ */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 500px;
+}
+
+.table thead {
+  background: #0d1520;
+}
+
+.table th {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #94a3b8;
+  border-bottom: 2px solid #1a2332;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.table th svg {
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #1a2332;
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: #1a2332;
+}
+
+/* ============================================
+   CELL STYLES
+============================================ */
+.planCell {
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.planValue {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  background: rgba(96, 165, 250, 0.08);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.1);
+}
+
+.nesCell {
+  font-weight: 700;
+}
+
+.nesValue {
+  font-size: 1.2rem;
+  color: #facc15;
+}
+
+.timeCell {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* ============================================
+   ACTION CELL
+============================================ */
+.actionCell {
+  min-width: 200px;
+}
+
+.inlineForm {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 80px;
+  padding: 0.4rem 0.6rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 0.85rem;
+  transition: border-color 0.3s;
+  width: 100px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.input::placeholder {
+  color: #64748b;
+}
+
+.updateBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.updateBtn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+}
+
+.updateBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.updateBtn svg {
+  font-size: 0.85rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   EMPTY STATE
+============================================ */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.emptyState h3 {
+  margin: 0 0 0.5rem 0;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   SCROLLBAR
+============================================ */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}
+.addUserBtn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.addUserBtn:hover {
+  background: #45a049;
+}
+
+.addUserForm {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+}
+
+.addUserForm h3 {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.addUserFormInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: end;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.saveBtn {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.saveBtn:hover {
+  background: #1976D2;
+}
+
+.cancelBtn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancelBtn:hover {
+  background: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .addUserFormInner {
+    grid-template-columns: 1fr;
+  }
+   }
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .headerIcon {
+    font-size: 1.4rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .searchWrapper,
+  .selectWrapper {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .table {
+    font-size: 0.8rem;
+    min-width: 450px;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .nesValue {
+    font-size: 1rem;
+  }
+
+  .inlineForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .updateBtn {
+    justify-content: center;
+    padding: 0.4rem 1rem;
+  }
+
+  .emptyState {
+    padding: 2rem 1rem;
+  }
+
+  .emptyIcon {
+    font-size: 3rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem 0.5rem 1.5rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .headerIcon {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .searchInput,
+  .documentSelect {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem 0.5rem 2.2rem;
+  }
+
+  .primaryBtn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .table {
+    font-size: 0.7rem;
+    min-width: 380px;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.4rem 0.4rem;
+  }
+
+  .table th svg {
+    font-size: 0.65rem;
+    margin-right: 0.2rem;
+  }
+
+  .nesValue {
+    font-size: 0.9rem;
+  }
+
+  .timeCell {
+    font-size: 0.65rem;
+  }
+
+  .input {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .updateBtn {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .updateBtn svg {
+    font-size: 0.7rem;
+  }
+
+  .userBadge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .emptyState h3 {
+    font-size: 1rem;
+  }
+
+  .emptyState p {
+    font-size: 0.8rem;
+  }
+
+  .emptyIcon {
+    font-size: 2.5rem;
+  }
+
+  .message {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .messageIcon {
+    font-size: 1rem;
+  }
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0.5rem 0.25rem 1rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .table {
+    font-size: 0.65rem;
+    min-width: 320px;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.3rem 0.3rem;
+  }
+
+  .nesValue {
+    font-size: 0.8rem;
+  }
+
+  .input {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .updateBtn {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .planValue {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}

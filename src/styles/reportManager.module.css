@@ -1,0 +1,166 @@
+.container {
+  width: 100%;
+  margin-top: 65px;
+  min-height: 100vh;
+  padding: 25px;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
+}
+
+.table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #1d4ed8;
+}
+
+.table th {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 15px;
+  color: #e2e8f0;
+  border-bottom: 1px solid #334155;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.table tbody tr {
+  transition: .25s;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #162033;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #1e293b;
+}
+
+.table tbody tr:hover {
+  background: #273449;
+}
+
+.empty {
+  text-align: center;
+  padding: 35px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.deleteBtn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.deleteBtn:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+.deleteBtn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Scrollbar */
+
+.tableWrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 20px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .container {
+    padding: 18px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .deleteBtn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .table {
+    min-width: 900px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .deleteBtn {
+    width: 100%;
+    padding: 9px;
+    font-size: 13px;
+  }
+}

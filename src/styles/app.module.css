@@ -1,0 +1,99 @@
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.appName {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #facc15; /* yellow stars */
+  font-size: 14px;
+}
+
+.ratingText {
+  margin-left: 6px;
+  color: var(--foreground);
+  font-size: 13px;
+}
+
+.installs {
+  color: #ef4444; /* red installs */
+  font-size: 13px;
+  font-weight: 500;
+  }
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--background);
+  border: 1px solid rgba(120,120,120,0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 15px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 10px 0;
+  opacity: 0.8;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .image {
+    height: 150px;
+  }
+}

@@ -1,0 +1,782 @@
+/* styles/store.module.css */
+
+/* =====================================================
+   PAGE
+===================================================== */
+.page {
+  --bg: #070711;
+  --surface: rgba(19, 19, 34, 0.72);
+  --surface-2: rgba(26, 26, 46, 0.7);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #ecedf7;
+  --muted: #9698b8;
+
+  --purple: #7c5cff;
+  --cyan: #00e0ff;
+  --pink: #ff4d9d;
+  --green: #24d18a;
+  --amber: #f5a524;
+  --red: #ef4444;
+
+  min-height: 100vh;
+  padding: 28px 16px 90px;
+  color: var(--text);
+  background:
+    radial-gradient(900px 520px at 8% -12%, rgba(124, 92, 255, 0.28), transparent 60%),
+    radial-gradient(820px 520px at 102% -5%, rgba(0, 224, 255, 0.18), transparent 58%),
+    radial-gradient(760px 620px at 50% 118%, rgba(255, 77, 157, 0.16), transparent 62%),
+    var(--bg);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shell {
+  max-width: 1000px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.18), rgba(0, 224, 255, 0.08));
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  animation: rise 0.5s ease both;
+}
+
+.heroLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.heroIcon {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 12px 30px rgba(124, 92, 255, 0.5);
+}
+
+.heroText h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.6px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.heroText h1 span {
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroText p {
+  margin: 6px 0 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 10px 28px rgba(124, 92, 255, 0.5);
+  white-space: nowrap;
+}
+
+/* =====================================================
+   PICKER
+===================================================== */
+.picker {
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: rise 0.5s ease 0.05s both;
+}
+
+.pickerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pickerLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #cfd0e8;
+}
+
+.pickerLabel svg {
+  color: var(--cyan);
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 220px;
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  color: var(--purple);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 40px 12px 42px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.22s ease;
+}
+
+.searchInput::placeholder {
+  color: #6f7192;
+}
+
+.searchInput:focus {
+  border-color: var(--purple);
+  background: rgba(124, 92, 255, 0.09);
+  box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.18);
+}
+
+.searchBox:focus-within .searchIcon {
+  color: var(--cyan);
+}
+
+.searchClear {
+  position: absolute;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.searchClear:hover {
+  background: rgba(255, 77, 157, 0.25);
+  color: #fff;
+}
+
+/* ---------- Select row ---------- */
+.pickerRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.selectWrap {
+  position: relative;
+  flex: 1 1 240px;
+}
+
+.select {
+  width: 100%;
+  padding: 14px 44px 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.select:hover {
+  border-color: rgba(124, 92, 255, 0.5);
+}
+
+.select:focus {
+  border-color: var(--purple);
+  background-color: rgba(124, 92, 255, 0.09);
+  box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.18);
+}
+
+.select option {
+  background: #0e0e1c;
+  color: var(--text);
+}
+
+.selectChevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--purple);
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+/* ---------- Toolbar ---------- */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnPrimary {
+  color: #fff;
+  background: linear-gradient(120deg, var(--purple), var(--pink) 50%, var(--cyan));
+  background-size: 200% 100%;
+  box-shadow: 0 12px 30px rgba(124, 92, 255, 0.45);
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+}
+
+.btnGhost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.btnGhost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.btnRename {
+  color: #cfe9ff;
+  background: rgba(0, 224, 255, 0.12);
+  border: 1px solid rgba(0, 224, 255, 0.45);
+}
+
+.btnRename:hover:not(:disabled) {
+  background: rgba(0, 224, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.btnDelete {
+  color: #ffcdd2;
+  background: rgba(239, 68, 68, 0.14);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+}
+
+.btnDelete:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.24);
+  transform: translateY(-2px);
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.warn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  color: #ffd9ec;
+  background: rgba(255, 77, 157, 0.1);
+  border: 1px dashed rgba(255, 77, 157, 0.45);
+}
+
+.warn svg {
+  color: var(--pink);
+  flex: 0 0 auto;
+}
+
+/* =====================================================
+   RENAME PANEL
+===================================================== */
+.renamePanel {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 224, 255, 0.4);
+  background: linear-gradient(135deg, rgba(0, 224, 255, 0.08), rgba(124, 92, 255, 0.06));
+  box-shadow: 0 12px 30px rgba(0, 224, 255, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: rise 0.35s ease both;
+}
+
+.renameHead {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #cfe9ff;
+  text-transform: uppercase;
+}
+
+.renameHead svg {
+  color: var(--cyan);
+  font-size: 1.05rem;
+}
+
+.renameRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.renameInput {
+  flex: 1 1 240px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 224, 255, 0.4);
+  background: rgba(8, 8, 18, 0.6);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.22s ease;
+}
+
+.renameInput::placeholder {
+  color: #6f7192;
+}
+
+.renameInput:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(0, 224, 255, 0.18);
+  background: rgba(0, 224, 255, 0.06);
+}
+
+/* =====================================================
+   STATS ROW
+===================================================== */
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  animation: rise 0.4s ease both;
+}
+
+.statPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+}
+
+.statPill svg {
+  color: var(--purple);
+}
+
+.statPill.statOk {
+  color: #c8ffea;
+  background: rgba(36, 209, 138, 0.12);
+  border-color: rgba(36, 209, 138, 0.4);
+}
+
+.statPill.statOk svg {
+  color: var(--green);
+}
+
+/* =====================================================
+   EPISODES LIST
+===================================================== */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.post {
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: linear-gradient(165deg, rgba(19, 19, 34, 0.85), rgba(11, 11, 26, 0.9));
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  animation: rise 0.5s ease both;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.post::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  bottom: 22px;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--purple), var(--pink), var(--cyan));
+  opacity: 0.65;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 92, 255, 0.4);
+}
+
+.postHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  padding-left: 8px;
+}
+
+.episodeTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.epNum {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.epWords {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+/* ---------- Copy button ---------- */
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: 0 10px 24px rgba(124, 92, 255, 0.4);
+  transition: all 0.22s ease;
+}
+
+.copyBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(255, 77, 157, 0.45);
+}
+
+.copyBtnOk {
+  background: linear-gradient(135deg, var(--green), var(--cyan));
+  box-shadow: 0 10px 24px rgba(36, 209, 138, 0.5);
+}
+
+/* ---------- Episode content ---------- */
+.content {
+  padding-left: 8px;
+  color: #d6d7ef;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  letter-spacing: 0.15px;
+}
+
+.content p {
+  margin: 0 0 1em;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.content br {
+  content: "";
+  display: block;
+  margin-bottom: 0.6em;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 20px;
+  border-radius: 18px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border);
+  text-align: center;
+}
+
+.empty svg {
+  color: var(--purple);
+  font-size: 1.1rem;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 720px) {
+  .post {
+    padding: 18px;
+  }
+
+  .content {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 16px 12px 80px;
+  }
+
+  .hero,
+  .picker {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .heroIcon {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    border-radius: 13px;
+    font-size: 1.2rem;
+  }
+
+  .heroText h1 {
+    font-size: 1.2rem;
+  }
+
+  .heroText p {
+    font-size: 0.78rem;
+  }
+
+  .badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pickerTop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    max-width: none;
+  }
+
+  .pickerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selectWrap {
+    flex: 1 1 auto;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar .btn {
+    width: 100%;
+  }
+
+  .renameRow {
+    flex-direction: column;
+  }
+
+  .renameRow .btn {
+    width: 100%;
+  }
+
+  .postHead {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .episodeTitle {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .copyBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .post {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .content {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    padding-left: 4px;
+  }
+
+  .post::before {
+    top: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroText h1 {
+    font-size: 1.05rem;
+  }
+
+  .epNum {
+    font-size: 0.9rem;
+  }
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .hero,
+  .picker,
+  .post,
+  .renamePanel,
+  .statsRow,
+  .spin,
+  .btn {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.btn:focus-visible,
+.select:focus-visible,
+.searchInput:focus-visible,
+.renameInput:focus-visible,
+.copyBtn:focus-visible,
+.searchClear:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}

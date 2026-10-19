@@ -1,0 +1,660 @@
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  min-height: 100vh;
+  background: #0a0e17;
+  margin-top: 65px;
+  padding: 2rem 1.5rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+/* ============================================
+   LOADING STATE
+============================================ */
+.loadingState {
+  max-width: 500px;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: #121926;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 1rem;
+}
+
+.loadingSpinner {
+  font-size: 2.5rem;
+  color: #60a5fa;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingState p {
+  color: #94a3b8;
+}
+
+/* ============================================
+   EDITOR CONTAINER
+============================================ */
+.editorContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #121926;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.saveBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.saveBtn:hover:not(:disabled) {
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
+}
+
+.saveBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.15);
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.deleteBtn:hover {
+  background: rgba(248, 113, 113, 0.2);
+  transform: scale(1.04);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ============================================
+   TOOLBAR
+============================================ */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  background: #0d1520;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.toolbarBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.6rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 32px;
+  height: 32px;
+}
+
+.toolbarBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+.toolbarBtn:active {
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
+}
+
+.toolbarDivider {
+  width: 1px;
+  height: 24px;
+  background: #2a3344;
+  margin: 0 0.2rem;
+}
+
+/* ============================================
+   IMAGE SECTION
+============================================ */
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.imageLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.imageInputWrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.imageInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.imageInput:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.imageUrlBtn {
+  padding: 0.6rem 1rem;
+  background: rgba(96, 165, 250, 0.1);
+  border: 2px solid #2a3344;
+  border-radius: 8px;
+  color: #60a5fa;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageUrlBtn:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: #60a5fa;
+}
+
+.imagePreviewWrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.imagePreview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.removeImageBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.4rem;
+  background: rgba(248, 113, 113, 0.8);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.removeImageBtn:hover {
+  background: rgba(248, 113, 113, 1);
+  transform: scale(1.05);
+}
+
+/* ============================================
+   TITLE INPUT
+============================================ */
+.titleInput {
+  padding: 0.8rem 1rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.titleInput:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.titleInput::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* ============================================
+   EDITOR AREA
+============================================ */
+.editorArea {
+  min-height: 350px;
+  max-height: 500px;
+  padding: 1rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.8;
+  overflow-y: auto;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.editorArea:empty::before {
+  content: attr(data-placeholder);
+  color: #64748b;
+}
+
+.editorArea:focus {
+  border-color: #60a5fa;
+}
+
+.editorFocused {
+  border-color: #60a5fa;
+}
+
+/* Editor Content Styles */
+.editorArea h1, .editorArea h2, .editorArea h3 {
+  color: #e0e0e0;
+  margin: 0.5rem 0;
+}
+
+.editorArea h1 { font-size: 2rem; }
+.editorArea h2 { font-size: 1.5rem; }
+.editorArea h3 { font-size: 1.2rem; }
+
+.editorArea blockquote {
+  border-left: 4px solid #60a5fa;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.editorArea ul, .editorArea ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.editorArea a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.editorArea a:hover {
+  text-decoration: underline;
+}
+
+.editorArea img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.editorArea code {
+  background: #0d1520;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.editorArea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.editorArea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.editorArea::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 3px;
+}
+
+.editorArea::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.charCount, .wordCount {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .editorContainer {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerActions {
+    width: 100%;
+  }
+
+  .headerActions button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .toolbar {
+    gap: 0.15rem;
+    padding: 0.35rem;
+  }
+
+  .toolbarBtn {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.8rem;
+    min-width: 28px;
+    height: 28px;
+  }
+
+  .titleInput {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .editorArea {
+    min-height: 250px;
+    max-height: 400px;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .imageInputWrapper {
+    flex-direction: column;
+  }
+
+  .imageUrlBtn {
+    padding: 0.5rem;
+  }
+
+  .imagePreview {
+    max-height: 150px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: center;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem 0.5rem 1.5rem;
+  }
+
+  .editorContainer {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .backBtn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .saveBtn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .deleteBtn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .toolbar {
+    gap: 0.1rem;
+    padding: 0.25rem;
+  }
+
+  .toolbarBtn {
+    padding: 0.25rem 0.3rem;
+    font-size: 0.7rem;
+    min-width: 24px;
+    height: 24px;
+  }
+
+  .titleInput {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+  }
+
+  .editorArea {
+    min-height: 200px;
+    max-height: 350px;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .editorArea h1 { font-size: 1.4rem; }
+  .editorArea h2 { font-size: 1.1rem; }
+  .editorArea h3 { font-size: 0.95rem; }
+
+  .imageLabel {
+    font-size: 0.75rem;
+  }
+
+  .imageInput {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .imagePreview {
+    max-height: 120px;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
+
+  .loadingState {
+    padding: 2rem 1rem;
+  }
+
+  .loadingSpinner {
+    font-size: 2rem;
+  }
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0.5rem 0.25rem 1rem;
+  }
+
+  .editorContainer {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .toolbarBtn {
+    padding: 0.2rem 0.25rem;
+    font-size: 0.65rem;
+    min-width: 20px;
+    height: 20px;
+  }
+
+  .editorArea {
+    min-height: 150px;
+    max-height: 300px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .titleInput {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .headerActions button {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}
+
+button:focus-visible,
+input:focus-visible,
+.editorArea:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SCROLLBAR (container)
+============================================ */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}

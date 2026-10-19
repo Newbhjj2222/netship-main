@@ -1,0 +1,673 @@
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  min-height: 100vh;
+  background: #0a0e17;
+  padding: 2rem 1.5rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+  display: flex;
+  margin-top: 65px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   CARD
+============================================ */
+.card {
+  max-width: 560px;
+  width: 100%;
+  background: #121926;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.15);
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e0e0;
+  transform: translateX(-2px);
+}
+
+.backBtn svg {
+  font-size: 0.8rem;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.headerIcon {
+  font-size: 1.8rem;
+  color: #60a5fa;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* ============================================
+   USER INFO
+============================================ */
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(96, 165, 250, 0.06);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(96, 165, 250, 0.06);
+  color: #94a3b8;
+  font-size: 0.9rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userIcon {
+  color: #60a5fa;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   STATUS ICON
+============================================ */
+.statusIconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.spinner {
+  font-size: 3.5rem;
+  color: #60a5fa;
+  animation: spin 1s linear infinite;
+}
+
+.successIcon {
+  font-size: 3.5rem;
+  color: #34d399;
+}
+
+.errorIcon {
+  font-size: 3.5rem;
+  color: #f87171;
+}
+
+.pendingIcon {
+  font-size: 3.5rem;
+  color: #facc15;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   STATUS WRAPPER
+============================================ */
+.statusWrapper {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.statusLoading {
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.statusSuccess {
+  background: rgba(52, 211, 153, 0.05);
+  border: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+.statusPending {
+  background: rgba(250, 204, 21, 0.05);
+  border: 1px solid rgba(250, 204, 21, 0.1);
+}
+
+.statusError {
+  background: rgba(248, 113, 113, 0.05);
+  border: 1px solid rgba(248, 113, 113, 0.1);
+}
+
+.statusTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.statusMessage {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================
+   SAVING WRAPPER
+============================================ */
+.savingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(96, 165, 250, 0.05);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #60a5fa;
+  font-size: 0.85rem;
+}
+
+.savingSpinner {
+  animation: spin 1s linear infinite;
+  font-size: 1rem;
+}
+
+/* ============================================
+   DATA WRAPPER
+============================================ */
+.dataWrapper {
+  background: #1a2332;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dataTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dataRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dataRow:last-child {
+  border-bottom: none;
+}
+
+.dataLabel {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.dataValue {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  font-weight: 500;
+  word-break: break-word;
+  text-align: right;
+}
+
+.dataValueSuccess {
+  font-size: 0.85rem;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.dataValuePending {
+  font-size: 0.85rem;
+  color: #facc15;
+  font-weight: 600;
+}
+
+.dataValueError {
+  font-size: 0.85rem;
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* ============================================
+   HELP BOX
+============================================ */
+.helpBox {
+  background: rgba(250, 204, 21, 0.04);
+  border: 1px solid rgba(250, 204, 21, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.helpBox p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.helpBox strong {
+  color: #facc15;
+}
+
+.whatsappLink {
+  color: #25d366;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.whatsappLink:hover {
+  color: #1ebe5c;
+  text-decoration: underline;
+}
+
+/* ============================================
+   ACTIONS
+============================================ */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.homeBtn,
+.balanceBtn,
+.retryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.homeBtn {
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.homeBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e0e0;
+}
+
+.balanceBtn {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+}
+
+.balanceBtn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(96, 165, 250, 0.3);
+}
+
+.retryBtn {
+  background: rgba(250, 204, 21, 0.1);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.15);
+}
+
+.retryBtn:hover {
+  background: rgba(250, 204, 21, 0.2);
+  transform: scale(1.02);
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+============================================ */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .headerIcon {
+    font-size: 1.4rem;
+  }
+
+  .backBtn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .spinner,
+  .successIcon,
+  .errorIcon,
+  .pendingIcon {
+    font-size: 3rem;
+  }
+
+  .statusTitle {
+    font-size: 1.1rem;
+  }
+
+  .statusMessage {
+    font-size: 0.9rem;
+  }
+
+  .dataWrapper {
+    padding: 0.75rem 1rem;
+  }
+
+  .dataRow {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.4rem 0;
+  }
+
+  .dataLabel {
+    font-size: 0.75rem;
+  }
+
+  .dataValue,
+  .dataValueSuccess,
+  .dataValuePending,
+  .dataValueError {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .homeBtn,
+  .balanceBtn,
+  .retryBtn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .userInfo {
+    font-size: 0.8rem;
+  }
+
+  .helpBox p {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+============================================ */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .header {
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .backBtn {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .backBtn svg {
+    font-size: 0.65rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .headerIcon {
+    font-size: 1.2rem;
+  }
+
+  .spinner,
+  .successIcon,
+  .errorIcon,
+  .pendingIcon {
+    font-size: 2.5rem;
+  }
+
+  .statusTitle {
+    font-size: 1rem;
+  }
+
+  .statusMessage {
+    font-size: 0.85rem;
+  }
+
+  .statusWrapper {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .dataWrapper {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .dataTitle {
+    font-size: 0.7rem;
+  }
+
+  .dataRow {
+    padding: 0.3rem 0;
+  }
+
+  .dataLabel {
+    font-size: 0.7rem;
+  }
+
+  .dataValue,
+  .dataValueSuccess,
+  .dataValuePending,
+  .dataValueError {
+    font-size: 0.75rem;
+  }
+
+  .homeBtn,
+  .balanceBtn,
+  .retryBtn {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.8rem;
+  }
+
+  .userInfo {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .userIcon {
+    font-size: 0.75rem;
+  }
+
+  .savingWrapper {
+    font-size: 0.75rem;
+  }
+
+  .helpBox {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .helpBox p {
+    font-size: 0.75rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - VERY SMALL
+============================================ */
+@media (max-width: 360px) {
+  .container {
+    padding: 0.75rem 0.5rem 1rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .header {
+    gap: 0.3rem;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .headerIcon {
+    font-size: 1rem;
+  }
+
+  .spinner,
+  .successIcon,
+  .errorIcon,
+  .pendingIcon {
+    font-size: 2rem;
+  }
+
+  .statusTitle {
+    font-size: 0.9rem;
+  }
+
+  .statusMessage {
+    font-size: 0.8rem;
+  }
+
+  .dataWrapper {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .dataLabel {
+    font-size: 0.65rem;
+  }
+
+  .dataValue,
+  .dataValueSuccess,
+  .dataValuePending,
+  .dataValueError {
+    font-size: 0.65rem;
+  }
+
+  .homeBtn,
+  .balanceBtn,
+  .retryBtn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .userInfo {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .helpBox p {
+    font-size: 0.7rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}
+
+button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner,
+  .savingSpinner {
+    animation-duration: 0.01ms;
+  }
+}
+
+/* ============================================
+   SCROLLBAR
+============================================ */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}

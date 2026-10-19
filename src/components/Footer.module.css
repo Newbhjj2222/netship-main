@@ -1,0 +1,176 @@
+/* =========================
+   FOOTER (Hidden by default)
+========================= */
+.footer {
+  display: none;
+}
+
+/* =========================
+   Mobile & Tablet Only
+========================= */
+@media (max-width: 768px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #070b1a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 1000;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    color: #94a3b8;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    min-width: 50px;
+    transition: all 0.25s ease;
+  }
+
+  .item svg {
+    font-size: 1.45rem;
+    transition: all 0.25s ease;
+  }
+
+  .item span {
+    font-size: 0.72rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .item:hover,
+  .item:focus {
+    color: #3b82f6;
+  }
+
+  .item:hover svg,
+  .item:focus svg {
+    transform: translateY(-3px);
+  }
+
+  .item:active {
+    transform: scale(0.95);
+  }
+
+  .active {
+    color: #3b82f6;
+  }
+
+  .active svg {
+    color: #3b82f6;
+    filter: drop-shadow(
+      0 0 8px rgba(59, 130, 246, 0.6)
+    );
+  }
+
+  :global(body) {
+    padding-bottom: 80px;
+  }
+}
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border: 2px solid #0b1220;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 768px) and (min-width: 481px) {
+  .footer {
+    height: 68px;
+  }
+
+  .item svg {
+    font-size: 1.3rem;
+  }
+
+  .item span {
+    font-size: 0.68rem;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 480px) {
+  .footer {
+    height: 65px;
+    padding: 0 4px;
+  }
+
+  .item {
+    gap: 3px;
+  }
+
+  .item svg {
+    font-size: 1.15rem;
+  }
+
+  .item span {
+    font-size: 0.62rem;
+  }
+}
+
+/* =========================
+   Small Phones
+========================= */
+@media (max-width: 360px) {
+  .item svg {
+    font-size: 1.05rem;
+  }
+
+  .item span {
+    font-size: 0.58rem;
+  }
+}

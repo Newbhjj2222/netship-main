@@ -1,0 +1,148 @@
+/* =========================
+   OVERLAY (background blur)
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* =========================
+   MAIN BOX
+========================= */
+.box {
+  width: 100%;
+  max-width: 420px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  color: #e5e7eb;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  animation: pop 0.2s ease-in-out;
+}
+
+/* =========================
+   TITLE
+========================= */
+.box h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================
+   SELECT
+========================= */
+.box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111827;
+  color: #e5e7eb;
+  outline: none;
+  font-size: 14px;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+.box textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111827;
+  color: #e5e7eb;
+  resize: none;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   ACTION BUTTONS WRAPPER
+========================= */
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* =========================
+   PRIMARY BUTTON (SEND)
+========================= */
+.actions button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  background: #2563eb;
+  color: white;
+}
+
+.actions button:hover {
+  background: #1d4ed8;
+}
+
+/* disabled state */
+.actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   CANCEL BUTTON
+========================= */
+.cancel {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #e5e7eb !important;
+}
+
+.cancel:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes pop {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 500px) {
+  .box {
+    padding: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

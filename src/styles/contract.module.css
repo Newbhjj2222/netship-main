@@ -1,0 +1,420 @@
+/* ===== CONTAINER ===== */
+.container {
+  min-height: 100vh;
+  margin-top: 95px;
+  background: #0a0e17;
+  padding: 2rem 1.5rem 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.description strong {
+  color: #60a5fa;
+}
+
+/* ===== FORM ===== */
+.form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #121926;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== SECTION ===== */
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== INFO ICON ===== */
+.infoIcon {
+  color: #60a5fa;
+  font-size: 1.1rem;
+  cursor: help;
+  transition: color 0.3s;
+}
+
+.infoIcon:hover {
+  color: #34d399;
+}
+
+/* ===== TOOLTIP ===== */
+.tooltip {
+  background: #1a2332;
+  color: #e0e0e0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0 0;
+  border-left: 3px solid #60a5fa;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== INPUT FIELDS ===== */
+.inputField {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  margin-bottom: 0.75rem;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.inputField::placeholder {
+  color: #64748b;
+}
+
+.inputField:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== SELECT INPUT ===== */
+.selectInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.selectInput option {
+  background: #1a2332;
+  color: #e0e0e0;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.checkbox:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.checkbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: #60a5fa;
+  cursor: pointer;
+}
+
+.checkbox span {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.checkbox .infoIcon {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submitBtn {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 25px rgba(96, 165, 250, 0.3);
+}
+
+.submitBtn:active {
+  transform: scale(0.98);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+  }
+
+  .inputField {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .selectInput {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .checkbox span {
+    font-size: 0.9rem;
+  }
+
+  .submitBtn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .tooltip {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .section {
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .inputField {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+  }
+
+  .selectInput {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .checkbox {
+    padding: 0.4rem;
+    gap: 0.5rem;
+  }
+
+  .checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox span {
+    font-size: 0.85rem;
+  }
+
+  .checkbox .infoIcon {
+    font-size: 0.8rem;
+  }
+
+  .submitBtn {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .tooltip {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.7rem;
+    border-left-width: 2px;
+  }
+}
+
+/* ===== VERY SMALL SCREENS ===== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0.75rem 0.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .form {
+    padding: 0.75rem;
+  }
+
+  .inputField {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .selectInput {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .checkbox span {
+    font-size: 0.8rem;
+  }
+
+  .submitBtn {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+============================================ */
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}
+
+/* ============================================
+   SELECTION STYLING
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}
+
+/* ============================================
+   FOCUS VISIBLE (accessibility)
+============================================ */
+.inputField:focus-visible,
+.selectInput:focus-visible,
+.submitBtn:focus-visible,
+.checkbox input:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}

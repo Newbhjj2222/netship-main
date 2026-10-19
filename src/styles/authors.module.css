@@ -1,0 +1,553 @@
+/* ============================
+   MAIN CONTAINER
+   ============================ */
+
+.container {
+  max-width: 1280px;
+  margin: 70px auto;
+  padding: 2rem 1.5rem 4rem;
+  min-height: 100vh;
+  background: #0a0e17;
+  color: #e0e6f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================
+   HEADER / HERO SECTION
+   ============================ */
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(145deg, #111927, #0d1520);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.headerGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+}
+
+.headerTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #00f5ff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.headerUnderline {
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 0;
+  background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+  border-radius: 4px;
+}
+
+.headerDesc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #9aaec9;
+  max-width: 780px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================
+   AI SUMMARY BOX
+   ============================ */
+
+.aiSummary {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.04), rgba(0, 200, 255, 0.02));
+  border: 1px solid rgba(0, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  max-width: 720px;
+  margin: 1rem auto 0;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+.aiSummaryText {
+  font-size: 0.95rem;
+  color: #b8cbe0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================
+   GRID — CARDS
+   ============================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================
+   CARD
+   ============================ */
+
+.card {
+  background: linear-gradient(160deg, #121c2b, #0b1320);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cardTopBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Card hover state - add via JavaScript */
+.cardHover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 16px 48px rgba(0, 255, 255, 0.06);
+}
+
+.cardHover .cardTopBorder {
+  opacity: 1;
+}
+
+/* ============================
+   AVATAR
+   ============================ */
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2a3f, #0d1a2b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #00f5ff;
+  border: 2px solid rgba(0, 255, 255, 0.15);
+  margin-bottom: 0.8rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.avatarHover {
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 24px rgba(0, 255, 255, 0.08);
+}
+
+.avatarIcon {
+  width: 32px;
+  height: 32px;
+}
+
+/* ============================
+   NAME
+   ============================ */
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f0f5ff;
+  margin: 0.2rem 0 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  line-height: 1.3;
+}
+
+.verified {
+  color: #00f5ff;
+  font-size: 1rem;
+  margin-left: 2px;
+}
+
+/* ============================
+   STATS
+   ============================ */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem 1.8rem;
+  margin: 0.8rem 0 1.2rem;
+  width: 100%;
+  padding: 0.6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #9aaec9;
+}
+
+.statIcon {
+  color: #00f5ff;
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+.statLabel {
+  font-weight: 500;
+  color: #d0dcee;
+}
+
+/* ============================
+   BUTTONS
+   ============================ */
+
+.followBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #00c8ff, #0099cc);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 200, 255, 0.15);
+  letter-spacing: 0.3px;
+}
+
+.followBtnIcon {
+  font-size: 1rem;
+}
+
+.followBtnHover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 28px rgba(0, 200, 255, 0.25);
+  background: linear-gradient(135deg, #00ddff, #00aadd);
+}
+
+.followBtnDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Following state */
+.followBtnFollowing {
+  background: transparent;
+  color: #00f5ff;
+  border: 1.5px solid rgba(0, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.followBtnFollowingHover {
+  background: rgba(0, 255, 255, 0.06);
+  border-color: rgba(0, 255, 255, 0.5);
+}
+
+/* ============================
+   PROFILE BUTTON (Link)
+   ============================ */
+
+.profileBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #9aaec9;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.2px;
+}
+
+.profileBtnHover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f0f5ff;
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+/* ============================
+   EMPTY STATE
+   ============================ */
+
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6a7f9e;
+}
+
+.emptyStateIcon {
+  font-size: 3rem;
+  color: #1a2a3f;
+  margin-bottom: 1rem;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem 1.2rem 3rem;
+  }
+
+  .headerTitle {
+    font-size: 2.1rem;
+  }
+
+  .headerDesc {
+    font-size: 1rem;
+  }
+
+  .grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* Mobile landscape & small tablets */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1rem 2.5rem;
+  }
+
+  .header {
+    padding: 1.8rem 1rem;
+    border-radius: 18px;
+  }
+
+  .headerTitle {
+    font-size: 1.7rem;
+  }
+
+  .headerUnderline {
+    width: 50px;
+  }
+
+  .headerDesc {
+    font-size: 0.95rem;
+  }
+
+  .aiSummary {
+    padding: 1rem 1.2rem;
+  }
+
+  .aiSummaryText {
+    font-size: 0.88rem;
+  }
+
+  .grid {
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .card {
+    padding: 1.4rem 1rem 1.4rem;
+    border-radius: 16px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+  }
+
+  .avatarIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .name {
+    font-size: 1.05rem;
+  }
+
+  .stats {
+    gap: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .statIcon {
+    font-size: 0.8rem;
+  }
+
+  .followBtn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .profileBtn {
+    font-size: 0.82rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem 0.75rem 2rem;
+  }
+
+  .header {
+    padding: 1.4rem 0.8rem;
+    border-radius: 14px;
+  }
+
+  .headerTitle {
+    font-size: 1.4rem;
+  }
+
+  .headerDesc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .aiSummary {
+    padding: 0.8rem 1rem;
+  }
+
+  .aiSummaryText {
+    font-size: 0.82rem;
+  }
+
+  .grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    padding: 1.2rem 0.8rem 1.2rem;
+    border-radius: 14px;
+  }
+
+  .avatar {
+    width: 54px;
+    height: 54px;
+    font-size: 1.4rem;
+  }
+
+  .avatarIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .verified {
+    font-size: 0.85rem;
+  }
+
+  .stats {
+    gap: 0.5rem 1rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0;
+  }
+
+  .statIcon {
+    font-size: 0.7rem;
+  }
+
+  .followBtn {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 30px;
+  }
+
+  .profileBtn {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 30px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .headerTitle {
+    font-size: 1.2rem;
+  }
+
+  .headerDesc {
+    font-size: 0.82rem;
+  }
+
+  .card {
+    padding: 1rem 0.6rem 1rem;
+  }
+
+  .name {
+    font-size: 0.92rem;
+  }
+
+  .stats {
+    font-size: 0.7rem;
+    gap: 0.4rem 0.8rem;
+  }
+}
+
+/* ============================
+   DARK SCROLLBAR
+   ============================ */
+
+.scrollbarTrack {
+  background: #0a0e17;
+}
+
+.scrollbarThumb {
+  background: #1a2a3f;
+  border-radius: 12px;
+}
+
+.scrollbarThumbHover {
+  background: #2a3f5a;
+}

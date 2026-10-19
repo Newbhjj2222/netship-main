@@ -1,0 +1,268 @@
+/* =========================
+   FLOATING BUTTON
+========================= */
+
+.floatingBtn {
+  position: fixed;
+  right: 25px;
+  margin-bottom: 125px;
+  z-index: 1000;
+
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #6366f1
+  );
+
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(79, 70, 229, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+.floatingBtn:hover {
+  transform: scale(1.08) translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #4338ca,
+    #4f46e5
+  );
+}
+
+.floatingBtn:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+
+  z-index: 2000;
+}
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.form {
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  padding: 24px;
+
+  background: #0f172a;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+
+  animation: popup 0.25s ease forwards;
+}
+
+/* =========================
+   POPUP ANIMATION
+========================= */
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+  margin: 0;
+
+  text-align: center;
+
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.input,
+.textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  background: #1e293b;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #94a3b8;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* =========================
+   BUTTONS CONTAINER
+========================= */
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* =========================
+   BUTTON BASE
+========================= */
+
+.cancelBtn,
+.saveBtn {
+  flex: 1;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 15px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   CANCEL BUTTON
+========================= */
+
+.cancelBtn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.cancelBtn:hover {
+  background: #b91c1c;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.saveBtn {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.saveBtn:hover {
+  background: #4338ca;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .floatingBtn {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingBtn {
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .form {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .cancelBtn,
+  .saveBtn {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}

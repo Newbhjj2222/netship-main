@@ -1,0 +1,150 @@
+.refundPage {
+  min-height: 100vh;
+  margin-top: 60px;
+  background: #070b1a;
+  padding: 40px 15px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.updated {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.card {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card section {
+  margin-bottom: 35px;
+}
+
+.card section:last-child {
+  margin-bottom: 0;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.card ul {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+
+.card li {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.warning {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+.contactBox {
+  margin-top: 18px;
+  padding: 20px;
+  background: #111827;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contactBox p {
+  margin-bottom: 14px;
+}
+
+.contactBox p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .refundPage {
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .card h2 {
+    font-size: 1.15rem;
+  }
+
+  .card p,
+  .card li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .updated {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}

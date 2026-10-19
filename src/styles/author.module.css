@@ -1,0 +1,813 @@
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  min-height: 100vh;
+  background: #0a0e17;
+  margin-top: 65px;
+  padding: 2rem 1.5rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+/* ============================================
+   CARD
+============================================ */
+.card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #121926;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIcon {
+  font-size: 2.5rem;
+  color: #60a5fa;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+/* ============================================
+   STATS
+============================================ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #1a2332;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(96, 165, 250, 0.15);
+}
+
+.statIcon {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+
+.statVerified .statIcon {
+  color: #34d399;
+}
+
+.statUnverified .statIcon {
+  color: #f87171;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+.statVerified .statValue {
+  color: #34d399;
+}
+
+.statUnverified .statValue {
+  color: #f87171;
+}
+
+/* ============================================
+   FILTERS
+============================================ */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchWrapper {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+.searchInput::placeholder {
+  color: #64748b;
+}
+
+.filterSelect {
+  padding: 0.6rem 1rem;
+  background: #1a2332;
+  border: 2px solid #2a3344;
+  border-radius: 10px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+/* ============================================
+   GRID
+============================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ============================================
+   AUTHOR CARD
+============================================ */
+.card {
+  background: #1a2332;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== CARD HEADER ===== */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a0e17;
+  flex-shrink: 0;
+}
+
+.cardUserInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.username {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  word-break: break-word;
+}
+
+.statusBadge {
+  margin-top: 0.15rem;
+}
+
+.statusVerified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  padding: 0.1rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.statusUnverified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  padding: 0.1rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid rgba(248, 113, 113, 0.15);
+}
+
+/* ===== CARD BODY ===== */
+.cardBody {
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  margin-bottom: 0.75rem;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0;
+}
+
+.cardLabel {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.cardValue {
+  color: #e0e0e0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ===== CARD ACTIONS ===== */
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.actionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actionBtn:hover:not(:disabled) {
+  transform: scale(1.04);
+}
+
+.verifyBtn {
+  background: rgba(52, 211, 153, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.verifyBtn:hover:not(:disabled) {
+  background: rgba(52, 211, 153, 0.25);
+}
+
+.unverifyBtn {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.15);
+}
+
+.unverifyBtn:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.25);
+}
+
+.deleteBtn {
+  background: rgba(220, 53, 69, 0.12);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.15);
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: rgba(220, 53, 69, 0.25);
+}
+
+/* ============================================
+   EMPTY STATE
+============================================ */
+.emptyState {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.emptyState h3 {
+  margin: 0 0 0.5rem 0;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   SPINNER
+============================================ */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   SCROLLBAR
+============================================ */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #3a4a5a;
+}
+/* ============================================
+   ADDITIONAL STATS
+============================================ */
+.statMonetized .statIcon {
+  color: #34d399;
+}
+
+.statMonetized .statValue {
+  color: #34d399;
+}
+
+.statNonMonetized .statIcon {
+  color: #f87171;
+}
+
+.statNonMonetized .statValue {
+  color: #f87171;
+}
+
+/* ============================================
+   BADGE ROW
+============================================ */
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
+}
+
+/* ============================================
+   VERIFICATION BADGES
+============================================ */
+.badgeVerified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  padding: 0.1rem 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.badgeUnverified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  padding: 0.1rem 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(248, 113, 113, 0.15);
+}
+
+/* ============================================
+   MONETIZATION BADGES
+============================================ */
+.monetizedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.08);
+  padding: 0.1rem 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(52, 211, 153, 0.12);
+}
+
+.nonMonetizedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.08);
+  padding: 0.1rem 0.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(248, 113, 113, 0.12);
+}
+
+/* ============================================
+   TEXT COLORS
+============================================ */
+.monetizedText {
+  color: #34d399 !important;
+}
+
+.nonMonetizedText {
+  color: #f87171 !important;
+}
+
+/* ============================================
+   ACTION BUTTONS
+============================================ */
+.allowBtn {
+  background: rgba(52, 211, 153, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.allowBtn:hover:not(:disabled) {
+  background: rgba(52, 211, 153, 0.25);
+}
+
+.disallowBtn {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.15);
+}
+
+.disallowBtn:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.25);
+}
+
+/* ============================================
+   RESPONSIVE - Updated
+============================================ */
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .badgeRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filterSelect {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .headerIcon {
+    font-size: 2rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .backBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .actionBtn {
+    padding: 0.5rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem 0.5rem 1.5rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .headerIcon {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .statCard {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .statValue {
+    font-size: 1rem;
+  }
+
+  .statIcon {
+    font-size: 1.2rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .searchWrapper {
+    min-width: unset;
+  }
+
+  .filterSelect {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .username {
+    font-size: 0.9rem;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .actionBtn {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+
+  .emptyState {
+    padding: 2rem 1rem;
+  }
+
+  .emptyIcon {
+    font-size: 3rem;
+  }
+
+  .emptyState h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0.5rem 0.25rem 1rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .headerIcon {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  .username {
+    font-size: 0.8rem;
+  }
+
+  .statusBadge {
+    font-size: 0.6rem;
+  }
+
+  .cardLabel,
+  .cardValue {
+    font-size: 0.7rem;
+  }
+
+  .actionBtn {
+    font-size: 0.65rem;
+    padding: 0.3rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+::selection {
+  background: #60a5fa;
+  color: #0a0e17;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}

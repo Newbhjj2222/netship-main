@@ -1,0 +1,425 @@
+/* =====================================
+   FILE: autho.module.css
+   Dark Theme | Responsive | Attractive
+   ===================================== */
+
+/* ----- GLOBAL RESET & BASE ----- */
+.container {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0d0f14;
+  color: #f0f3f8;
+  min-height: 100vh;
+}
+
+/* ----- PROFILE CARD (glassmorphism) ----- */
+.profileCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 40px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.8);
+  transition: all 0.25s ease;
+}
+
+.profileCard:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 24px 48px -12px rgba(255, 215, 0, 0.08);
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fbbf24;
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.25);
+  background: #1e2329;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.1rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.verified {
+  color: #3b82f6;
+  font-size: 1.6rem;
+  -webkit-text-fill-color: #3b82f6;
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.4));
+}
+
+.role {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  display: inline-block;
+  padding: 0.2rem 1.2rem;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 0.2rem 0 0.4rem 0;
+  letter-spacing: 0.3px;
+}
+
+.bio {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0.6rem 0 1rem 0;
+}
+
+/* ----- SOCIAL ICONS ----- */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.socialWhatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+.socialFacebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  box-shadow: 0 6px 16px rgba(24, 119, 242, 0.3);
+}
+.socialInstagram:hover {
+  background: #e4405f;
+  border-color: #e4405f;
+  box-shadow: 0 6px 16px rgba(228, 64, 95, 0.3);
+}
+.socialTwitter:hover {
+  background: #000;
+  border-color: #fff;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* ----- STATS GRID (glass) ----- */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 28px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(251, 191, 36, 0.2);
+  transform: translateY(-4px);
+}
+
+.statIcon {
+  font-size: 2rem;
+  color: #fbbf24;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.statNumber {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0.2rem 0 0.1rem 0;
+  color: #f8fafc;
+  letter-spacing: -0.01em;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+}
+
+/* ----- STORIES SECTION ----- */
+.storySection {
+  margin-top: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(251, 191, 36, 0.15);
+  display: inline-block;
+  color: #f1f5f9;
+}
+
+/* ----- STORY GRID (responsive) ----- */
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.storyCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.storyCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(251, 191, 36, 0.2);
+  box-shadow: 0 20px 40px -16px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.storyLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.storyImage {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  background: #1a1f26;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.storyContent {
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+
+.storyTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  color: #f1f5f9;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.storyDescription {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 0.8rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.storyMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 0.7rem;
+}
+
+.storyMetaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.storyMetaIcon {
+  font-size: 0.75rem;
+  color: #fbbf24;
+}
+
+/* ----- EMPTY STATE ----- */
+.empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 40px;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.emptyTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* ----- RESPONSIVE TWEAKS ----- */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .profileCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 32px;
+    gap: 1.2rem;
+  }
+
+  .avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .name {
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  .bio {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .statCard {
+    padding: 1rem 0.5rem;
+  }
+
+  .statNumber {
+    font-size: 1.6rem;
+  }
+
+  .statLabel {
+    font-size: 0.7rem;
+  }
+
+  .storyGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .name {
+    font-size: 1.6rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .statCard:last-child {
+    grid-column: span 2;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileCard {
+    padding: 1.5rem 1rem;
+    border-radius: 24px;
+  }
+
+  .socialLink {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ----- SCROLLBAR (optional polish) ----- */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+.container::-webkit-scrollbar-track {
+  background: #0d0f14;
+}
+.container::-webkit-scrollbar-thumb {
+  background: #fbbf24;
+  border-radius: 12px;
+}

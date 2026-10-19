@@ -1,0 +1,299 @@
+.editorWrapper {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.toolbarWrapper {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.5rem;
+  overflow-x: auto;
+}
+
+.menuBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+  min-height: 40px;
+}
+
+.menuGroup {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+}
+
+.menuDivider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 0.25rem;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: #8892b0;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButton:hover {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.08);
+}
+
+.menuButton.active {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.12);
+}
+
+.menuSelect {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #a8b2d1;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+  min-width: 60px;
+}
+
+.menuSelect:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.menuSelect:focus {
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.menuSelect option {
+  background: #1a1a2e;
+  color: #e6e6e6;
+}
+
+.editorContainer {
+  flex: 1;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.editorContent {
+  color: #e6e6e6;
+  font-size: 16px;
+  line-height: 1.8;
+  outline: none;
+  min-height: 200px;
+}
+
+.editorContent :global(.ProseMirror) {
+  outline: none;
+}
+
+.editorContent :global(.ProseMirror p) {
+  margin: 0 0 0.5rem 0;
+}
+
+.editorContent :global(.ProseMirror h1),
+.editorContent :global(.ProseMirror h2),
+.editorContent :global(.ProseMirror h3),
+.editorContent :global(.ProseMirror h4),
+.editorContent :global(.ProseMirror h5),
+.editorContent :global(.ProseMirror h6) {
+  color: #ffffff;
+  margin: 1rem 0 0.5rem;
+}
+
+.editorContent :global(.ProseMirror h1) { font-size: 2rem; }
+.editorContent :global(.ProseMirror h2) { font-size: 1.75rem; }
+.editorContent :global(.ProseMirror h3) { font-size: 1.5rem; }
+.editorContent :global(.ProseMirror h4) { font-size: 1.25rem; }
+.editorContent :global(.ProseMirror h5) { font-size: 1.1rem; }
+.editorContent :global(.ProseMirror h6) { font-size: 1rem; }
+
+.editorContent :global(.ProseMirror blockquote) {
+  border-left: 3px solid #ffd700;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  color: #a8b2d1;
+}
+
+.editorContent :global(.ProseMirror code) {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  color: #64ffda;
+  font-size: 0.9em;
+}
+
+.editorContent :global(.ProseMirror pre) {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  color: #e6e6e6;
+}
+
+.editorContent :global(.ProseMirror pre code) {
+  background: none;
+  color: #e6e6e6;
+  padding: 0;
+}
+
+.editorContent :global(.ProseMirror a) {
+  color: #64ffda;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.editorContent :global(.ProseMirror img) {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.editorContent :global(.ProseMirror table) {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.editorContent :global(.ProseMirror table td),
+.editorContent :global(.ProseMirror table th) {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.6rem;
+}
+
+.editorContent :global(.ProseMirror table th) {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+}
+
+.editorContent :global(.ProseMirror ul),
+.editorContent :global(.ProseMirror ol) {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.editorContent :global(.ProseMirror ul li),
+.editorContent :global(.ProseMirror ol li) {
+  margin: 0.2rem 0;
+}
+
+.editorContent :global(.ProseMirror ul[data-type="taskList"]) {
+  list-style: none;
+  padding-left: 0;
+}
+
+.editorContent :global(.ProseMirror ul[data-type="taskList"] li) {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.editorContent :global(.ProseMirror ul[data-type="taskList"] li input[type="checkbox"]) {
+  margin-top: 0.3rem;
+  accent-color: #ffd700;
+  cursor: pointer;
+}
+
+.editorContent :global(.ProseMirror .is-editor-empty:first-child::before) {
+  content: attr(data-placeholder);
+  float: left;
+  color: #8892b0;
+  pointer-events: none;
+  height: 0;
+}
+
+.editorFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.75rem;
+  color: #8892b0;
+}
+
+.counts {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.readingTime {
+  color: #64ffda;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menuBar {
+    gap: 0.15rem;
+  }
+  
+  .menuGroup {
+    flex-wrap: wrap;
+  }
+  
+  .menuButton {
+    padding: 0.2rem 0.35rem;
+    font-size: 0.75rem;
+  }
+  
+  .menuSelect {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.3rem;
+    min-width: 50px;
+  }
+  
+  .editorContainer {
+    min-height: 150px;
+    max-height: 300px;
+    padding: 0.75rem;
+  }
+  
+  .editorContent {
+    font-size: 14px;
+  }
+  
+  .editorFooter {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem 0.75rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuDivider {
+    margin: 0 0.1rem;
+  }
+  
+  .menuButton {
+    padding: 0.15rem 0.25rem;
+    font-size: 0.7rem;
+  }
+  
+  .menuSelect {
+    font-size: 0.65rem;
+    min-width: 40px;
+  }
+  
+  .editorContent {
+    font-size: 13px;
+  }
+}

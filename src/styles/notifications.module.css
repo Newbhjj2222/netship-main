@@ -1,0 +1,298 @@
+/* ================= BASE ================= */
+.container {
+  min-height: 100vh;
+  background: #0b0f17;
+  color: #e5e7eb;
+  margin-top: 65px;
+  padding: 20px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerIcon {
+  font-size: 22px;
+  color: #60a5fa;
+}
+
+.title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headerStats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.statBadge {
+  background: #1f2937;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ================= FORM ================= */
+.formCard {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 25px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #0b1220;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+}
+
+/* ================= TOOLBAR ================= */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: #0b1220;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  margin-bottom: 10px;
+}
+
+.toolbarBtn {
+  background: #111827;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toolbarBtn:hover {
+  background: #1f2937;
+}
+
+.toolbarDivider {
+  width: 1px;
+  background: #374151;
+  margin: 0 4px;
+}
+
+/* ================= EDITOR ================= */
+.editor {
+  min-height: 180px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0b1220;
+  color: #e5e7eb;
+  outline: none;
+  direction: ltr;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.editorFocused {
+  border-color: #3b82f6;
+}
+
+/* placeholder trick */
+.editor:empty:before {
+  content: attr(placeholder);
+  color: #6b7280;
+}
+
+/* ================= BUTTON ================= */
+.submitBtn {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ================= TABLE ================= */
+.tableSection {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #1f2937;
+  font-size: 13px;
+}
+
+.table th {
+  text-align: left;
+  color: #9ca3af;
+}
+
+.titleText {
+  font-weight: 600;
+}
+
+.contentPreview {
+  color: #9ca3af;
+  max-width: 250px;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+/* ================= EMPTY ================= */
+.emptyState {
+  text-align: center;
+  padding: 30px;
+  color: #9ca3af;
+}
+
+/* ================= LOADING ================= */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 50px;
+}
+
+.loadingSpinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ================= UNAUTHORIZED ================= */
+.unauthorized {
+  text-align: center;
+  padding: 50px;
+}
+
+.goHomeBtn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table {
+    min-width: 600px;
+  }
+
+  .toolbar {
+    gap: 4px;
+  }
+
+  .toolbarBtn {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .editor {
+    min-height: 140px;
+  }
+}

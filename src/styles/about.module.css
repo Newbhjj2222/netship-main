@@ -1,0 +1,140 @@
+.about {
+  min-height: 100vh;
+  background: #080b18;
+  color: white;
+
+  padding: 100px 20px 60px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.goal,
+.mission,
+.vision {
+  max-width: 1000px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(139, 92, 246, 0.15);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+}
+
+.goal:hover,
+.mission:hover,
+.vision:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+}
+
+.goal h2,
+.mission h2,
+.vision h2 {
+  margin-bottom: 20px;
+
+  color: #8b5cf6;
+
+  font-size: 1.8rem;
+  font-weight: 800;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.goal h2::after,
+.mission h2::after,
+.vision h2::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 10px auto 0;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #c084fc
+  );
+}
+
+.goal p,
+.mission p,
+.vision p {
+  color: #d1d5db;
+
+  line-height: 1.9;
+
+  font-size: 1rem;
+
+  text-align: justify;
+}
+
+/* HERO TITLE */
+
+.about::before {
+  content: "ABOUT NEW TALENTS STORIES GROUP";
+
+  display: block;
+
+  text-align: center;
+
+  font-size: 2rem;
+  font-weight: 900;
+
+  color: white;
+
+  margin-bottom: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .about {
+    padding: 90px 15px 40px;
+  }
+
+  .goal,
+  .mission,
+  .vision {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .goal h2,
+  .mission h2,
+  .vision h2 {
+    font-size: 1.4rem;
+  }
+
+  .goal p,
+  .mission p,
+  .vision p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .about::before {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,530 @@
+/* styles/idex.module.css */
+
+/* ======================
+   CONTAINER
+====================== */
+.container {
+  max-width: 1200px;
+  margin: 75px auto;
+  padding: 2rem 1.5rem;
+  background-color: #0f0f1a;
+  color: #e0e0ff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ======================
+   STATS CARDS
+====================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.statCard {
+  background-color: #1a1a2e;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.statCard:nth-child(1)::before {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+}
+
+.statCard:nth-child(2)::before {
+  background: linear-gradient(135deg, #ec4899, #f59e0b);
+}
+
+.statCard:nth-child(3)::before {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.statCard h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #a0a0cc;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.statCard span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statCard:nth-child(2) span {
+  background: linear-gradient(135deg, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ======================
+   SEARCH INPUT
+====================== */
+.search {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  background-color: #1a1a2e;
+  border: 2px solid rgba(124, 58, 237, 0.2);
+  border-radius: 50px;
+  color: #e0e0ff;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.search::placeholder {
+  color: #a0a0cc;
+  opacity: 0.7;
+}
+
+.search:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1), 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+/* ======================
+   POSTS GRID
+====================== */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+/* ======================
+   POST CARD
+====================== */
+.post {
+  background-color: #16213e;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.post:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.15), 0 10px 40px rgba(0, 0, 0, 0.4);
+  border-color: #7c3aed;
+}
+
+.post:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* ======================
+   POST IMAGE
+====================== */
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(124, 58, 237, 0.2);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.post:hover .image {
+  transform: scale(1.02);
+}
+
+/* ======================
+   POST CONTENT
+====================== */
+.post h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e0e0ff;
+  margin: 1.25rem 1.5rem 0.75rem 1.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post p {
+  font-size: 0.9rem;
+  color: #a0a0cc;
+  line-height: 1.6;
+  margin: 0 1.5rem 1rem 1.5rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ======================
+   POST META
+====================== */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+  box-sizing: border-box;
+}
+
+.meta span {
+  font-size: 0.85rem;
+  color: #a0a0cc;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.meta span svg {
+  color: #06b6d4;
+}
+
+.meta strong {
+  color: #06b6d4;
+}
+
+/* ======================
+   CATEGORY
+====================== */
+.post > div:has(strong) {
+  margin: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+  color: #ec4899;
+  padding: 0.3rem 0.5rem;
+  background: rgba(236, 72, 153, 0.1);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.post > div strong {
+  color: #ec4899;
+}
+
+/* ======================
+   OPEN STORY LINK
+====================== */
+.openStory {
+  color: #06b6d4;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  padding: 1rem 1.5rem;
+  margin-top: auto;
+}
+
+.post:hover .openStory {
+  color: #7c3aed;
+  gap: 0.75rem;
+}
+
+/* ======================
+   EMPTY STATE
+====================== */
+.posts + div {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  font-size: 1.1rem;
+  color: #a0a0cc;
+  background-color: #1a1a2e;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+/* ======================
+   LOAD MORE BUTTON
+====================== */
+.loadMore {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+.loadMore:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+  background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+}
+
+.loadMore:active {
+  transform: translateY(-1px);
+}
+
+/* ======================
+   ANIMATIONS
+====================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.post:nth-child(1) { animation-delay: 0.05s; }
+.post:nth-child(2) { animation-delay: 0.1s; }
+.post:nth-child(3) { animation-delay: 0.15s; }
+.post:nth-child(4) { animation-delay: 0.2s; }
+.post:nth-child(5) { animation-delay: 0.25s; }
+.post:nth-child(6) { animation-delay: 0.3s; }
+.post:nth-child(7) { animation-delay: 0.35s; }
+.post:nth-child(8) { animation-delay: 0.4s; }
+.post:nth-child(9) { animation-delay: 0.45s; }
+.post:nth-child(10) { animation-delay: 0.5s; }
+
+/* ======================
+   RESPONSIVE DESIGN - TABLET
+====================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statCard {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .statCard span {
+    font-size: 2rem;
+  }
+
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .post h2 {
+    font-size: 1.15rem;
+    margin: 1rem 1.25rem 0.5rem 1.25rem;
+  }
+
+  .post p {
+    margin: 0 1.25rem 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .meta {
+    margin: 0 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .openStory {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .post > div:has(strong) {
+    margin: 0.5rem 1.25rem;
+  }
+
+  .search {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .loadMore {
+    max-width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ======================
+   RESPONSIVE DESIGN - MOBILE
+====================== */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .statCard {
+    padding: 1rem 1.25rem;
+  }
+
+  .statCard h4 {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .statCard span {
+    font-size: 1.75rem;
+  }
+
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .post {
+    border-radius: 16px;
+  }
+
+  .image {
+    height: 160px;
+  }
+
+  .post h2 {
+    font-size: 1.1rem;
+    margin: 0.85rem 1rem 0.5rem 1rem;
+  }
+
+  .post p {
+    margin: 0 1rem 0.75rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .meta {
+    margin: 0 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+  }
+
+  .meta span {
+    font-size: 0.78rem;
+  }
+
+  .post > div:has(strong) {
+    margin: 0.5rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  .openStory {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .search {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 40px;
+  }
+
+  .loadMore {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 40px;
+    letter-spacing: 0.5px;
+  }
+
+  .posts + div {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ======================
+   RESPONSIVE DESIGN - LARGE DESKTOP
+====================== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ======================
+   FOCUS STYLES
+====================== */
+.container :focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ======================
+   SELECTION STYLE
+====================== */
+.container ::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: white;
+}
+
+.container ::-moz-selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: white;
+}

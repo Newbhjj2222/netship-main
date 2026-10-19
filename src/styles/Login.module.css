@@ -1,0 +1,846 @@
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(139, 92, 246, 0.14),
+      transparent 35%
+    ),
+    #070b1a;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title {
+  margin: 0 0 22px;
+
+  font-size: 2.15rem;
+  line-height: 1.2;
+  font-weight: 800;
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #818cf8,
+    #a78bfa
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.message {
+  width: 100%;
+  max-width: 420px;
+
+  box-sizing: border-box;
+
+  margin: 0 0 16px;
+  padding: 12px 15px;
+
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  border-radius: 12px;
+
+  background: rgba(99, 102, 241, 0.10);
+
+  color: #c7d2fe;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.18);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MAIN LOGIN FORM
+========================================================= */
+
+.form {
+  width: 100%;
+  max-width: 420px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  padding: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 23, 42, 0.98),
+      rgba(15, 23, 42, 0.88)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form input {
+  width: 100%;
+  min-height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  background: #111c31;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.form input::placeholder {
+  color: #94a3b8;
+}
+
+.form input:hover {
+  border-color: rgba(129, 140, 248, 0.35);
+}
+
+.form input:focus {
+  background: #16223a;
+
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.14),
+    0 8px 25px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.btn,
+.googleBtn,
+.forgotPassword,
+.backToLogin {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   SIGN IN BUTTON
+========================================================= */
+
+.btn {
+  width: 100%;
+  min-height: 50px;
+
+  padding: 13px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #6366f1,
+      #7c3aed
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(79, 70, 229, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 32px rgba(79, 70, 229, 0.35);
+
+  filter: brightness(1.08);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD LINK
+========================================================= */
+
+.forgotPassword {
+  margin-top: 14px;
+
+  padding: 6px 10px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #93c5fd;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.forgotPassword:hover:not(:disabled) {
+  color: #c4b5fd;
+
+  transform: translateY(-1px);
+}
+
+.forgotPassword:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   OR TEXT
+========================================================= */
+
+.orText {
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 18px 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.orText::before,
+.orText::after {
+  content: "";
+
+  flex: 1;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 163, 184, 0.25)
+  );
+}
+
+.orText::after {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.25),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   GOOGLE BUTTON
+========================================================= */
+
+.googleBtn {
+  width: 100%;
+  max-width: 420px;
+
+  min-height: 50px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 13px 18px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.googleBtn:hover:not(:disabled) {
+  background: #f8fafc;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.googleBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.googleBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.googleBtn img {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGIN INSTRUCTIONS
+========================================================= */
+
+.loginInstructions {
+  width: 100%;
+  max-width: 420px;
+
+  box-sizing: border-box;
+
+  margin-top: 20px;
+  padding: 18px 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 41, 59, 0.75),
+      rgba(15, 23, 42, 0.85)
+    );
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-left: 3px solid #6366f1;
+
+  border-radius: 15px;
+
+  color: #cbd5e1;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.loginInstructions h3 {
+  margin: 0 0 12px;
+
+  color: #e0e7ff;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.loginInstructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.loginInstructions li {
+  margin-bottom: 10px;
+
+  color: #aebbd0;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.loginInstructions li:last-child {
+  margin-bottom: 0;
+}
+
+.loginInstructions strong {
+  color: #c4b5fd;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   REGISTER TEXT
+========================================================= */
+
+.registerText {
+  width: 100%;
+  max-width: 420px;
+
+  margin: 20px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+.registerText a {
+  color: #60a5fa;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+.registerText a:hover {
+  color: #a78bfa;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD BOX
+========================================================= */
+
+.forgotPasswordBox {
+  width: 100%;
+  max-width: 420px;
+
+  box-sizing: border-box;
+
+  padding: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 23, 42, 0.98),
+      rgba(30, 41, 59, 0.92)
+    );
+
+  border: 1px solid rgba(129, 140, 248, 0.15);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.forgotPasswordBox h3 {
+  margin: 0 0 12px;
+
+  color: #e0e7ff;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+.forgotPasswordBox p {
+  margin: 0 0 20px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BACK TO LOGIN
+========================================================= */
+
+.backToLogin {
+  width: 100%;
+
+  margin-top: 14px;
+
+  padding: 12px 15px;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  border: 1px solid rgba(99, 102, 241, 0.2);
+
+  border-radius: 11px;
+
+  color: #a5b4fc;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.backToLogin:hover:not(:disabled) {
+  background: rgba(99, 102, 241, 0.15);
+
+  border-color: rgba(129, 140, 248, 0.4);
+
+  transform: translateY(-1px);
+}
+
+.backToLogin:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOADING OVERLAY
+========================================================= */
+
+.loading {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(3, 7, 18, 0.88);
+
+  backdrop-filter: blur(8px);
+
+  color: #e0e7ff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.loading::before {
+  content: "";
+
+  width: 48px;
+  height: 48px;
+
+  border: 4px solid rgba(255, 255, 255, 0.10);
+
+  border-top-color: #6366f1;
+
+  border-right-color: #8b5cf6;
+
+  border-radius: 50%;
+
+  animation: loginSpin 0.8s linear infinite;
+
+  box-shadow:
+    0 0 25px rgba(99, 102, 241, 0.2);
+}
+
+.loading::after {
+  content: "Tegereza gato...";
+
+  color: #c7d2fe;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.btn:focus-visible,
+.googleBtn:focus-visible,
+.forgotPassword:focus-visible,
+.backToLogin:focus-visible,
+.form input:focus-visible,
+.registerText a:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes loginSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 28px 18px;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .form,
+  .forgotPasswordBox {
+    max-width: 460px;
+  }
+
+  .loginInstructions,
+  .message,
+  .googleBtn,
+  .orText,
+  .registerText {
+    max-width: 460px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    min-height: 100dvh;
+
+    padding: 22px 14px;
+  }
+
+  .title {
+    margin-bottom: 18px;
+
+    font-size: 1.65rem;
+  }
+
+  .message {
+    padding: 11px 12px;
+
+    font-size: 13px;
+  }
+
+  .form {
+    gap: 13px;
+
+    padding: 19px;
+
+    border-radius: 17px;
+  }
+
+  .form input {
+    min-height: 48px;
+
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .btn,
+  .googleBtn {
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    font-size: 14px;
+  }
+
+  .loginInstructions {
+    margin-top: 17px;
+
+    padding: 15px;
+
+    border-radius: 13px;
+  }
+
+  .loginInstructions h3 {
+    font-size: 0.95rem;
+  }
+
+  .loginInstructions li {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .forgotPasswordBox {
+    padding: 20px;
+
+    border-radius: 17px;
+  }
+
+  .forgotPasswordBox h3 {
+    font-size: 1.2rem;
+  }
+
+  .forgotPasswordBox p {
+    font-size: 13px;
+  }
+
+  .registerText {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .container {
+    padding: 18px 10px;
+  }
+
+  .title {
+    font-size: 1.45rem;
+  }
+
+  .form {
+    padding: 16px;
+  }
+
+  .loginInstructions {
+    padding: 13px;
+  }
+
+  .loginInstructions ul {
+    padding-left: 18px;
+  }
+
+  .loginInstructions li {
+    font-size: 12px;
+  }
+
+  .forgotPasswordBox {
+    padding: 17px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .googleBtn,
+  .forgotPassword,
+  .backToLogin,
+  .form input {
+    transition: none;
+  }
+
+  .loading::before {
+    animation: none;
+  }
+}

@@ -1,0 +1,164 @@
+.container {
+  min-height: 100vh;
+  background: #0b1120;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: #131c31;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,.35);
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #b7c3d7;
+  margin-bottom: 25px;
+  word-break: break-word;
+}
+
+.statusBox {
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.success {
+  background: rgba(34,197,94,.15);
+  border: 1px solid #22c55e;
+}
+
+.processing {
+  background: rgba(249,115,22,.15);
+  border: 1px solid #f97316;
+}
+
+.pending {
+  background: rgba(59,130,246,.15);
+  border: 1px solid #3b82f6;
+}
+
+.failed {
+  background: rgba(239,68,68,.15);
+  border: 1px solid #ef4444;
+}
+
+.error {
+  background: rgba(220,38,38,.18);
+  border: 1px solid #dc2626;
+}
+
+.notFound {
+  background: rgba(107,114,128,.18);
+  border: 1px solid #6b7280;
+}
+
+.statusTitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.statusText {
+  color: #d6dce8;
+  line-height: 1.6;
+}
+
+.button {
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  background: linear-gradient(90deg,#2563eb,#4f46e5);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+/* ===== Loading ===== */
+
+.loadingContainer{
+  min-height:100vh;
+  background:#0b1120;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.spinner{
+  width:70px;
+  height:70px;
+  border:7px solid rgba(255,255,255,.15);
+  border-top:7px solid #3b82f6;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+.loadingText{
+  margin-top:20px;
+  color:#d8e2f1;
+  font-size:18px;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.card{
+padding:22px;
+border-radius:16px;
+}
+
+.title{
+font-size:23px;
+}
+
+.statusTitle{
+font-size:19px;
+}
+
+.button{
+font-size:15px;
+padding:13px;
+}
+
+.spinner{
+width:60px;
+height:60px;
+}
+}

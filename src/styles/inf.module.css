@@ -1,0 +1,481 @@
+/* ===== CONTAINER ===== */
+.container {
+  min-height: 100vh;
+  background: #0a0e17;
+  padding: 2rem 1rem;
+  margin-top: 65px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+/* ===== HEADER ===== */
+.header {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerIcon {
+  font-size: 2rem;
+  color: #60a5fa;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* ===== STATUS BADGE ===== */
+.statusBadge {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.statusMonitized {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #34d399;
+}
+
+.statusPending {
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #facc15;
+}
+
+.statusEligible {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #60a5fa;
+}
+
+.statusNotEligible {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #f87171;
+}
+
+/* ===== CARD ===== */
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #121926;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== USER INFO ===== */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a0e17;
+  flex-shrink: 0;
+}
+
+.userDetails {
+  flex: 1;
+}
+
+.username {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem 0;
+  color: #fff;
+}
+
+.userStats {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* ===== LEVEL SECTION ===== */
+.levelSection {
+  margin-bottom: 2rem;
+}
+
+.levelBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.levelEmoji {
+  font-size: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background: #1a2332;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+}
+
+.progressText {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statItem {
+  background: #1a2332;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.statItem:hover {
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.15rem;
+}
+
+.statValue {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== CHECKLIST ===== */
+.checklistSection {
+  background: #1a2332;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.checklistTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.checkItem:last-child {
+  border-bottom: none;
+}
+
+.checkDone {
+  font-size: 1.1rem;
+}
+
+.checkPending {
+  font-size: 1.1rem;
+}
+
+.checkText {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.checkText svg {
+  margin-right: 0.4rem;
+  color: #60a5fa;
+}
+
+/* ===== APPLY SECTION ===== */
+.applySection {
+  margin-top: 1rem;
+}
+
+.applyBtn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: #0a0e17;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.applyBtn:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
+}
+
+.applyBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.applyBtnDisabled {
+  width: 100%;
+  padding: 1rem;
+  background: #1a2332;
+  color: #64748b;
+  border: 1px solid #2a3344;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.applyMessage {
+  margin-top: 0.75rem;
+  text-align: center;
+  color: #facc15;
+  font-size: 0.9rem;
+  background: rgba(250, 204, 21, 0.1);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(250, 204, 21, 0.15);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.successMessage {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid #34d399;
+  border-radius: 12px;
+  color: #34d399;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.successSub {
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* ===== MONITIZED BADGE ===== */
+.monitizedBadge {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: rgba(52, 211, 153, 0.08);
+  border: 2px solid #34d399;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.monitizedIcon {
+  font-size: 2.5rem;
+  color: #facc15;
+  flex-shrink: 0;
+}
+
+.monitizedBadge h4 {
+  margin: 0 0 0.25rem 0;
+  color: #34d399;
+  font-size: 1.1rem;
+}
+
+.monitizedBadge p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .userInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .statItem {
+    padding: 0.75rem;
+  }
+
+  .checklistSection {
+    padding: 1rem;
+  }
+
+  .applyBtn,
+  .applyBtnDisabled {
+    font-size: 1rem;
+    padding: 0.85rem;
+  }
+
+  .monitizedBadge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .statusBadge {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .statValue {
+    font-size: 0.95rem;
+  }
+
+  .checkText {
+    font-size: 0.85rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.8rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}

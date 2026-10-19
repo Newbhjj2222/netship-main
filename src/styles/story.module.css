@@ -1,0 +1,669 @@
+/* ========================================
+   STORY PAGE - MAIN CONTAINER
+======================================== */
+
+.storyContainer {
+  min-height: 100vh;
+  background: #070b14;
+  color: #ffffff;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.heroSection {
+  position: relative;
+  height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(7, 11, 20, 0.95) 0%,
+    rgba(7, 11, 20, 0.7) 40%,
+    rgba(7, 11, 20, 0.25) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 35px;
+}
+
+.heroTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+/* ========================================
+   BADGES
+======================================== */
+
+.badgesContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badgePremium {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.badgeFree {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.badgeSeason {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.badgeCategory {
+  background: rgba(99, 102, 241, 0.25);
+  color: #c7d2fe;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* ========================================
+   STORY INFO
+======================================== */
+
+.storyInfo {
+  margin: 10px 0 4px 0;
+  color: #e2e8f0;
+  font-size: 15px;
+}
+
+.storyInfoSmall {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ========================================
+   SUMMARY SECTION - Hejuru y'ama episodes
+======================================== */
+.summaryContainer {
+  background: rgba(15, 23, 42, 0.85);
+  padding: 18px 22px;
+  border-radius: 14px;
+  margin: 12px 0 16px;
+  border-left: 5px solid #7c3aed;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+
+  width: 100%;
+  height: auto;
+  min-height: fit-content;
+  overflow: visible;
+}
+
+.summaryContainer:hover {
+  background: rgba(15, 23, 42, 0.92);
+  border-left-color: #8b5cf6;
+  box-shadow: 0 8px 40px rgba(124, 58, 237, 0.15);
+}
+
+.summaryContent {
+  width: 100%;
+}
+
+.summaryText {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 15px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.summaryLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0 8px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  color: #7c3aed;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.summaryIcon {
+  font-size: 13px;
+}
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.actionsContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.startReadingBtn {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+.startReadingBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 35px rgba(124, 58, 237, 0.4);
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.startReadingBtn:active {
+  transform: translateY(0);
+}
+
+.ratingContainer {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 15px;
+}
+
+.ratingStars {
+  display: flex;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.ratingStarBtn {
+  background: none;
+  border: none;
+  color: #facc15;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 3px;
+  filter: grayscale(0.3);
+}
+
+.ratingStarBtn:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+.ratingStarBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========================================
+   EPISODES SECTION
+======================================== */
+
+.episodesTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 30px 0 16px 0;
+}
+
+.episodesGrid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.episodeCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.episodeCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.episodeCard:hover {
+  background: #1a2332;
+  border-color: rgba(124, 58, 237, 0.25);
+  transform: translateX(6px);
+}
+
+.episodeCard:hover::before {
+  opacity: 1;
+}
+
+.episodeCard.active {
+  background: rgba(124, 58, 237, 0.12);
+  border: 2px solid #7c3aed;
+  box-shadow: 0 4px 25px rgba(124, 58, 237, 0.15);
+}
+
+.episodeCard.read {
+  background: rgba(22, 163, 74, 0.06);
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+.episodeCard.read::before {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.05), transparent);
+  opacity: 1;
+}
+
+.episodeIcon {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 40px;
+  text-align: center;
+}
+
+.episodeInfo {
+  flex: 1;
+}
+
+.episodeNumber {
+  font-weight: 600;
+  color: #7c3aed;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.episodeCard.read .episodeNumber {
+  color: #22c55e;
+}
+
+.episodeTitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.episodeStatus {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+/* ========================================
+   FOOTER INFO
+======================================== */
+
+.footerInfo {
+  margin-top: 40px;
+  padding: 22px 24px;
+  background: #111827;
+  border-radius: 14px;
+  font-size: 13px;
+  color: #64748b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.8;
+}
+
+.footerInfo strong {
+  color: #94a3b8;
+}
+
+.footerInfo p {
+  margin: 5px 0;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 420px;
+  }
+
+  .heroOverlay {
+    padding: 24px;
+  }
+
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .summaryContainer {
+    padding: 15px 18px;
+    max-height: 160px;
+  }
+
+  .summaryText {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .startReadingBtn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .episodeCard {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .episodeTitle {
+    font-size: 13px;
+  }
+
+  .episodesTitle {
+    font-size: 1.4rem;
+  }
+
+  .ratingStarBtn {
+    font-size: 22px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .storyContainer {
+    padding: 12px;
+    margin-top: 50px;
+  }
+
+  .heroSection {
+    height: 380px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+
+  .heroOverlay {
+    padding: 16px 18px;
+  }
+
+  .heroTitle {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .badgesContainer {
+    gap: 6px;
+  }
+
+  .storyInfo {
+    font-size: 13px;
+    margin: 6px 0 2px 0;
+  }
+
+  .storyInfoSmall {
+    font-size: 12px;
+  }
+
+  .summaryContainer {
+    padding: 12px 14px;
+    max-height: 130px;
+    border-left-width: 4px;
+    margin: 8px 0 12px 0;
+    border-radius: 10px;
+  }
+
+  .summaryContainer.expanded {
+    max-height: 400px;
+  }
+
+  .summaryText {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .summaryLabel {
+    font-size: 10px;
+    padding: 3px 10px;
+    margin-top: 8px;
+  }
+
+  .summaryToggle {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .actionsContainer {
+    gap: 10px;
+  }
+
+  .startReadingBtn {
+    padding: 10px 18px;
+    font-size: 13px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ratingContainer {
+    padding: 10px 14px;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .ratingStars {
+    justify-content: center;
+  }
+
+  .ratingStarBtn {
+    font-size: 20px;
+  }
+
+  .episodesTitle {
+    font-size: 1.2rem;
+    margin: 20px 0 12px 0;
+  }
+
+  .episodesGrid {
+    gap: 10px;
+  }
+
+  .episodeCard {
+    padding: 12px 14px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .episodeIcon {
+    font-size: 20px;
+    width: 32px;
+  }
+
+  .episodeNumber {
+    font-size: 13px;
+  }
+
+  .episodeTitle {
+    font-size: 12px;
+  }
+
+  .episodeStatus {
+    font-size: 18px;
+    width: 30px;
+  }
+
+  .footerInfo {
+    padding: 16px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .storyContainer {
+    padding: 8px;
+  }
+
+  .heroSection {
+    height: 320px;
+    border-radius: 12px;
+  }
+
+  .heroOverlay {
+    padding: 12px 14px;
+  }
+
+  .heroTitle {
+    font-size: 1.2rem;
+  }
+
+  .summaryContainer {
+    padding: 10px 12px;
+    max-height: 100px;
+    border-radius: 8px;
+  }
+
+  .summaryContainer.expanded {
+    max-height: 300px;
+  }
+
+  .summaryText {
+    font-size: 12px;
+  }
+
+  .episodeCard {
+    padding: 10px 12px;
+    border-radius: 10px;
+    gap: 10px;
+  }
+
+  .episodeIcon {
+    font-size: 18px;
+    width: 28px;
+  }
+
+  .episodeNumber {
+    font-size: 12px;
+  }
+
+  .episodeTitle {
+    font-size: 11px;
+  }
+
+  .episodeStatus {
+    font-size: 16px;
+    width: 26px;
+  }
+}
+
+/* ========================================
+   DARK MODE - Already dark by default
+======================================== */
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.summaryContainer {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.episodeCard {
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.episodeCard:nth-child(1) { animation-delay: 0.05s; }
+.episodeCard:nth-child(2) { animation-delay: 0.1s; }
+.episodeCard:nth-child(3) { animation-delay: 0.15s; }
+.episodeCard:nth-child(4) { animation-delay: 0.2s; }
+.episodeCard:nth-child(5) { animation-delay: 0.25s; }
+.episodeCard:nth-child(6) { animation-delay: 0.3s; }
+.episodeCard:nth-child(7) { animation-delay: 0.35s; }
+.episodeCard:nth-child(8) { animation-delay: 0.4s; }
+.episodeCard:nth-child(9) { animation-delay: 0.45s; }
+.episodeCard:nth-child(10) { animation-delay: 0.5s; }
+.episodeCard:nth-child(11) { animation-delay: 0.55s; }
+.episodeCard:nth-child(12) { animation-delay: 0.6s; }
+.episodeCard:nth-child(13) { animation-delay: 0.65s; }
+.episodeCard:nth-child(14) { animation-delay: 0.7s; }
+.episodeCard:nth-child(15) { animation-delay: 0.75s; }
+.episodeCard:nth-child(16) { animation-delay: 0.8s; }
+.episodeCard:nth-child(17) { animation-delay: 0.85s; }
+.episodeCard:nth-child(18) { animation-delay: 0.9s; }
+.episodeCard:nth-child(19) { animation-delay: 0.95s; }
+.episodeCard:nth-child(20) { animation-delay: 1s; }

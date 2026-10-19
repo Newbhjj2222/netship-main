@@ -1,0 +1,140 @@
+.container {
+  background: #070b1a;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* MAIN CARD */
+.profileCard {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 20px;
+}
+
+/* EMAIL */
+.email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+
+/* ================= NE S CARD ================= */
+.nesCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffd16622, #4da3ff22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 18px;
+}
+
+.nesTitle {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.nesCard h3 {
+  font-size: 22px;
+  color: #ffd166;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* BUTTON BASE */
+.actions button {
+  padding: 11px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* BUY BUTTON */
+.buyBtn {
+  background: linear-gradient(135deg, #4da3ff, #6c5ce7);
+  color: white;
+}
+
+.buyBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* AUTHOR BUTTON */
+.authorBtn {
+  background: linear-gradient(135deg, #00c9a7, #1dd1a1);
+  color: white;
+}
+
+.authorBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* LOGOUT */
+.logoutBtn {
+  background: linear-gradient(135deg, #ff4d4d, #ff6b6b);
+  color: white;
+}
+
+.logoutBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .profileCard {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .nesCard h3 {
+    font-size: 18px;
+  }
+
+  .actions button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

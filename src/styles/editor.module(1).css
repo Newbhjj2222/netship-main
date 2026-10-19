@@ -1,0 +1,339 @@
+.editorContainer {
+  min-height: 100vh;
+  background: #070b1a;
+  color: #ffffff;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 70px auto;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.toolbar {
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 20px;
+
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.toolbar button {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #1e293b;
+  color: #ffffff;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: all 0.25s ease;
+}
+
+.toolbar button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.toolbar button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Save Button */
+
+.toolbar button[title="Save"] {
+  width: auto;
+  padding: 0 16px;
+  gap: 8px;
+
+  background: #16a34a;
+}
+
+.toolbar button[title="Save"]:hover {
+  background: #15803d;
+}
+
+/* Delete Button */
+
+.delete {
+  background: #dc2626 !important;
+}
+
+.delete:hover {
+  background: #b91c1c !important;
+}
+
+/* =========================
+   FEATURED IMAGE
+========================= */
+
+.postImage {
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   STORY TITLE
+========================= */
+
+.titleInput {
+  width: 100%;
+
+  padding: 18px;
+  margin-bottom: 20px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+
+  outline: none;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.titleInput::placeholder {
+  color: #64748b;
+}
+
+.titleInput:focus {
+  border-color: #6366f1;
+}
+
+/* =========================
+   EDITOR AREA
+========================= */
+
+.editorArea {
+  min-height: 650px;
+
+  padding: 25px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  outline: none;
+
+  font-size: 18px;
+  line-height: 1.9;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.editorArea:focus {
+  border-color: #6366f1;
+}
+
+/* =========================
+   CONTENT STYLING
+========================= */
+
+.editorArea h1,
+.editorArea h2,
+.editorArea h3,
+.editorArea h4,
+.editorArea h5,
+.editorArea h6 {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  font-weight: 700;
+}
+
+.editorArea p {
+  margin-bottom: 15px;
+}
+
+.editorArea strong {
+  font-weight: 700;
+}
+
+.editorArea em {
+  font-style: italic;
+}
+
+.editorArea u {
+  text-decoration: underline;
+}
+
+.editorArea a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.editorArea ul,
+.editorArea ol {
+  padding-left: 30px;
+  margin: 15px 0;
+}
+
+.editorArea li {
+  margin-bottom: 8px;
+}
+
+.editorArea blockquote {
+  margin: 20px 0;
+  padding-left: 16px;
+
+  border-left: 4px solid #4f46e5;
+
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+.editorArea img {
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+.editorArea hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 25px 0;
+}
+
+.editorArea code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.editorArea pre {
+  overflow-x: auto;
+
+  padding: 15px;
+
+  background: #020617;
+
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.editorArea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.editorArea::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.editorArea::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 20px;
+}
+
+.editorArea::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .editorContainer {
+    padding: 15px;
+  }
+
+  .toolbar {
+    gap: 8px;
+  }
+
+  .toolbar button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .titleInput {
+    font-size: 22px;
+  }
+
+  .editorArea {
+    min-height: 500px;
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .postImage {
+    height: 250px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .editorContainer {
+    padding: 10px;
+  }
+
+  .toolbar {
+    justify-content: center;
+  }
+
+  .toolbar button {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .toolbar button[title="Save"] {
+    width: 100%;
+    height: 45px;
+  }
+
+  .titleInput {
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .editorArea {
+    min-height: 450px;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .postImage {
+    height: 200px;
+  }
+}
