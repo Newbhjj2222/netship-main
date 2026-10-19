@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Contract.module.css";
+import styles from "../styles/contract.module.css";
 
 import { db } from "../components/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
